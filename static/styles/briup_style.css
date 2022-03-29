@@ -1,0 +1,88 @@
+body {    
+    background-image: url("../imgs/villa/DJI_0130.jpg");
+    opacity: 0.85;
+	background-size: 200% 200%;
+	animation: gradient 150s linear infinite;
+	height: 100vh;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+#section0 {   
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+div.mainLogo {
+    padding: 0% 0% 0% 0%;
+}
+
+#img-Logo {
+    width: 50%;
+}
+
+#subtitleLogo {
+    padding: 1% 0% 0% 0%;
+
+    color: white;
+    font-family:  Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-style: italic;
+    letter-spacing: 2vw;
+}
+
+hr.mainSeparator {
+    color: white;
+    border: solid white;
+}
+
+div.subtitleLabelsContainer {
+    padding: 0% 0% 0% 0%;
+}
+
+a,u {
+    text-decoration: none !important;
+}
+
+p.subtitleLabel {
+    color: white;
+
+    font-size: 50px;
+    font-weight: 500 !important;
+    letter-spacing: 1vw;
+    
+    transition: 0.3s;
+}
+p.subtitleLabel:hover {
+    font-weight: 900 !important;
+    letter-spacing: 2vw;
+}
+
+div.col.main-arrows-down {
+    animation: arrowdrop 1.5s linear infinite;
+}
+@keyframes arrowdrop {
+    0%   {opacity: 0.2;}
+    25%  {opacity: 0.7;}
+    50%  {opacity: 1;}
+    75%  {opacity: 0.7;}
+    100% {opacity: 0.2;}
+}
+
+i.main-arrow-down{
+    margin-left: 0.5%;
+    margin-right: 0.5%;
+    
+    color:white;
+    /* -webkit-text-stroke: 2px #e73c7e; */
+}
