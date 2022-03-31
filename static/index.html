@@ -16,13 +16,15 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="scripts/briup_script.js"></script>
 
     <script src="scripts/original_script.js"></script>
     
     <script type="text/javascript">
         $(document).ready(function() {
             $('#fullpage').fullpage({
-              sectionsColor: [undefined, '#4BBFC3', '#7BAABE', 'whitesmoke', '#ccddff'],
+              sectionsColor: [undefined, undefined, '#7BAABE', '#42cbf5', '#ccddff'],
               anchors: ['firstPage', 'secondPage', 'thirdPage', '4thpage', 'lastPage'],
               menu: '#menu',
             });
@@ -31,14 +33,6 @@
 </head>
 
 <body>
-
-
-<!-- <ul id="menu">
-    <li data-menuanchor="firstPage" class="active"><a href="#firstPage">First</a></li>
-    <li data-menuanchor="secondPage"><a href="#secondPage">Second</a></li>
-    <li data-menuanchor="thirdPage"><a href="#thirdPage">Third</a></li>
-    <li data-menuanchor="4thpage"><a href="#4thpage">Third</a></li>
-</ul> -->
 
 <div id="fullpage">
     
@@ -50,21 +44,21 @@
         <hr class="mainSeparator">
         <div class="subtitleLabelsContainer container">
             <div class="row">
-                <div class="col">
-                    <a href="#secondPage"><p class="lead subtitleLabel" align="center">Food</p></a>
+                <div class="col-sm">
+                    <a href="#secondPage"><p class="lead subtitleLabel" align="center">Cibo</p></a>
                 </div>
-                <div class="col">
-                    <a href="#thirdPage"><p class="lead subtitleLabel" align="center">Music</p></a>
+                <div class="col-sm">
+                    <a href="#thirdPage"><p class="lead subtitleLabel" align="center">Musica</p></a>
                 </div>
-                <div class="col">
-                    <a href="#4thpage"><p class="lead subtitleLabel" align="center">Art</p></a>
+                <div class="col-sm">
+                    <a href="#4thpage"><p class="lead subtitleLabel" align="center">Arte</p></a>
                 </div>
             </div>
             <div class="row">
-                <div class="col main-arrows-down">
-                    <i class="fa fa-arrow-down fa-2x main-arrow-down" aria-hidden="true"></i>
-                    <i class="fa fa-arrow-down fa-2x main-arrow-down" aria-hidden="true"></i>
-                    <i class="fa fa-arrow-down fa-2x main-arrow-down" aria-hidden="true"></i>
+                <div id="mainArrowsDown" class="col-sm main-arrows-down" onclick="goTo(this)">
+                    <i class="fa fa-bolt-lightning fa-2x main-arrow-down" aria-hidden="true"></i>
+                    <i class="fa fa-bolt-lightning fa-2x main-arrow-down" aria-hidden="true"></i>
+                    <i class="fa fa-bolt-lightning fa-2x main-arrow-down" aria-hidden="true"></i>
                 </div>
             </div>
         </div>
@@ -72,6 +66,12 @@
 
 
     <div class="section" id="section1">
+        <h1>The End</h1>
+        <p>You reached the bottom of the page</p>
+    </div>
+    
+
+    <div class="section" id="section2">
         <div class="slide" id="slide1">
             <div class="intro">
                 <h1>First Slide</h1>
@@ -85,20 +85,171 @@
         <div class="slide" id="slide3">
             <h1>Slide 3</h1>
         </div>
-
-    </div>
-    <div class="section" id="section2">
-        <div class="intro">
-            <h1>The End</h1>
-            <p>You reached the bottom of the page</p>
-        </div>
     </div>
 
-    <div class="section" id="section3">
-        <div class="intro">
-            <h1>The End 2</h1>
-            <p>You reached the bottom of the page</p>
-        </div>
+    <div class="section overflow-auto" id="section3">
+        <form>
+            <div class="row">
+                <div class="col-sm-7 collab">
+                    <h1 class="sponsorTitle">Ringraziamo per il supporto</h1>
+                    <div class="container sponsorContainer">
+                        <div class="row">
+                            <h4 class="sponsorTitle">Le organizzazioni:</h4>
+                            <div class="d-flex justify-content-between">
+                                <div class="col-sm-3 sponsorLogoContainer sponsorOrganizzazioniContainer">
+                                    <figure class="figure">
+                                        <img class="sponsorLogo sponsorLogoOrganizzazione" src="imgs/partner/ambito_lecco.jpg"/>
+                                        <figcaption class="figure-caption text-center sponsorLogoCaption">Ambito Distrettuale<br>di Lecco</figcaption>
+                                    </figure>
+                                </div>
+                                <div class="col-sm-3 sponsorLogoContainer sponsorLogoOrganizzazione">
+                                    <figure class="figure">
+                                        <img class="sponsorLogo" src="imgs/partner/csv.png"/>
+                                        <figcaption class="figure-caption text-center sponsorLogoCaption">CSV Monza,<br>Lecco e Sondrio</figcaption>
+                                    </figure>
+                                </div>
+                                <div class="col-sm-3 sponsorLogoContainer sponsorLogoOrganizzazione">
+                                    <figure class="figure">
+                                        <img class="sponsorLogo" src="imgs/partner/girasole.png"/>
+                                        <figcaption class="figure-caption text-center sponsorLogoCaption">Impresa sociale<br>"Il Girasole"</figcaption>
+                                    </figure>
+                                </div>
+                                <div class="col-sm-3 sponsorLogoContainer sponsorLogoOrganizzazione">
+                                    <figure class="figure">
+                                        <img class="sponsorLogo" src="imgs/partner/lega_ambiente.png"/>
+                                        <figcaption class="figure-caption text-center sponsorLogoCaption">Legambiente<br>Lecco</figcaption>
+                                    </figure>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <h4 class="sponsorTitle">Le imprese:</h4>
+                            <div class="d-flex justify-content-between">
+                                <div class="col-sm-4 sponsorLogoContainer sponsorComuniContainer">
+                                    <figure class="figure">
+                                        <img class="sponsorLogo sponsorLogoImpresa" src="imgs/partner/nextPartner.jpg"/>
+                                        <figcaption class="figure-caption text-center sponsorLogoCaption">Impresa generosa s.p.a.</figcaption>
+                                    </figure>
+                                </div>
+                                <div class="col-sm-4 sponsorLogoContainer">
+                                    <figure class="figure">
+                                        <img class="sponsorLogo sponsorLogoImpresa" src="imgs/partner/nextPartner.jpg"/>
+                                        <figcaption class="figure-caption text-center sponsorLogoCaption">Impresa gentile s.r.l.</figcaption>
+                                    </figure>
+                                </div>
+                                <div class="col-sm-4 sponsorLogoContainer">
+                                    <figure class="figure">
+                                        <img class="sponsorLogo sponsorLogoImpresa" src="imgs/partner/nextPartner.jpg"/>
+                                        <figcaption class="figure-caption text-center sponsorLogoCaption">F.lli. prodighi</figcaption>
+                                    </figure>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <h4 class="sponsorTitle">I Comuni:</h4>
+                            <div class="d-flex justify-content-between">
+                                <div class="col-sm-2 sponsorLogoContainer sponsorComuniContainer">
+                                    <figure class="figure">
+                                        <img class="sponsorLogo sponsorLogoComune" src="imgs/partner/oggiono.jpg"/>
+                                        <figcaption class="figure-caption text-center sponsorLogoCaption">Oggiono</figcaption>
+                                    </figure>
+                                </div>
+                                <div class="col-sm-2 sponsorLogoContainer">
+                                    <figure class="figure">
+                                        <img class="sponsorLogo sponsorLogoComune" src="imgs/partner/cremella.jpg"/>
+                                        <figcaption class="figure-caption text-center sponsorLogoCaption">Cremella</figcaption>
+                                    </figure>
+                                </div>
+                                <div class="col-sm-2 sponsorLogoContainer">
+                                    <figure class="figure">
+                                        <img class="sponsorLogo sponsorLogoComune" src="imgs/partner/annone.png"/>
+                                        <figcaption class="figure-caption text-center sponsorLogoCaption">Annone<br>di Brianza</figcaption>
+                                    </figure>
+                                </div>
+                                <div class="col-sm-2 sponsorLogoContainer">
+                                    <figure class="figure">
+                                        <img class="sponsorLogo sponsorLogoComune" src="imgs/partner/barzago.png"/>
+                                        <figcaption class="figure-caption text-center sponsorLogoCaption">Barzago</figcaption>
+                                    </figure>
+                                </div>
+                                <div class="col-sm-2 sponsorLogoContainer">
+                                    <figure class="figure">
+                                        <img class="sponsorLogo sponsorLogoComune" src="imgs/partner/sirtori.gif"/>
+                                        <figcaption class="figure-caption text-center sponsorLogoCaption">Sirtori</figcaption>
+                                    </figure>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-5">
+                    <div class="container prenotazioneContainer">
+                        <div class="row">
+                            <div class="col-sm-12 d-flex justify-content-around">
+                                <h1 id="prenotazioneTitolo">Prenotaaaa!!</h1>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="d-flex justify-content-between">
+                                <div class="col-sm-5 inputContainer">
+                                    <label for="prenotazioneNome" class="prenotazioneLabel">Nome:</label>
+                                    <input id="prenotazioneNome" class="form-control campoPrenotazione" type="text" placeholder="Carlo">
+                                </div>
+                                <div class="col-sm-6 inputContainer">
+                                    <label for="prenotazioneCognome" class="prenotazioneLabel">Cognome:</label>
+                                    <input id="prenotazioneCognome" class="form-control campoPrenotazione" type="text" placeholder="Carloni">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="d-flex justify-content-between">
+                                <div class="col-sm-12 inputContainer" inputContainer>
+                                    <label for="prenotazioneMail" class="prenotazioneLabel">Email:</label>
+                                    <input id="prenotazioneMail" class="form-control campoPrenotazione" type="text" placeholder="carlo.carloni@propaganda.it">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="d-flex justify-content-left">
+                                <div class="col-sm-5 inputContainer">
+                                    <label for="prenotazioneNumero" class="prenotazioneLabel">In quanti siete?</label>
+                                    <input id="prenotazioneNumero" class="form-control campoPrenotazione" type="number" min="1" max="10" value="1">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="d-flex justify-content-between">
+                                <div class="col-sm-5 inputContainer">
+                                    <label for="prenotazioneGiorno" class="prenotazioneLabel">Giorno:</label>
+                                    <select id="prenotazioneGiorno" class="form-control campoPrenotazione">
+                                        <option selected>Venerdì 10 Giugno</option>
+                                        <option>Sabato 11 Giugno</option>
+                                        <option>Domenica 11 Giugno</option>
+                                    </select>
+                                </div>
+                                <div class="col-sm-6 inputContainer">
+                                    <label for="prenotazioneOra" class="prenotazioneLabel">Fascia oraria:</label>
+                                    <select id="prenotazioneOra" class="form-control campoPrenotazione">
+                                        <option selected>Pomeriggio 16.30 - 18.30</option>
+                                        <option>Sera 18.30 - 21.00</option>
+                                        <option>Notte 21.00 - 24.00</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12 d-flex justify-content-around">
+                                <button type="button" class="btn btn-danger prenotazioneConferma" onclick="prenota()">Confermaaa &nbsp;&nbsp; 
+                                    <i class="fa fa-bomb" aria-hidden="true"></i>
+                                    <i class="fa fa-bomb" aria-hidden="true"></i>
+                                    <i class="fa fa-bomb" aria-hidden="true"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
     </div>
 </div>
 

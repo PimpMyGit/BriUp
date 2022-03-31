@@ -1,12 +1,17 @@
-body {    
-    background-image: url("../imgs/villa/DJI_0130.jpg");
-    opacity: 0.85;
-	background-size: 200% 200%;
-	animation: gradient 150s linear infinite;
-	height: 100vh;
+#section0, #section1, #section3 {   
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-@keyframes gradient {
+#section0 {
+    background-image: url("../imgs/villa/DJI_0130_mod1.jpg");
+    opacity: 0.85;
+	background-size: 200% 200%;
+	animation: rotating 150s linear infinite;
+	height: 100vh;
+}
+@keyframes rotating {
 	0% {
 		background-position: 0% 50%;
 	}
@@ -18,10 +23,16 @@ body {
 	}
 }
 
-#section0 {   
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+#section1 {
+    background-image: url("../imgs/villa/DJI_0142.jpg");
+    opacity: 1 !important;
+    z-index: 1;
+}
+#section3 {
+    background-image: url("../imgs/villa/DJI_0148.jpg");
+    background-position: bottom !important;
+    opacity: 1 !important;
+    z-index: 1;
 }
 
 div.mainLogo {
@@ -68,8 +79,11 @@ p.subtitleLabel:hover {
     letter-spacing: 2vw;
 }
 
-div.col.main-arrows-down {
+div.col-sm.main-arrows-down {
     animation: arrowdrop 1.5s linear infinite;
+}
+div.col-sm.main-arrows-down:hover {
+    animation: arrowdrop 0.5s linear infinite;
 }
 @keyframes arrowdrop {
     0%   {opacity: 0.2;}
@@ -84,5 +98,85 @@ i.main-arrow-down{
     margin-right: 0.5%;
     
     color:white;
-    /* -webkit-text-stroke: 2px #e73c7e; */
+    transition: 0.3s;
+}
+
+div.collab {
+    border-right: 1px solid white;
+}
+
+h1.sponsorTitle, h4.sponsorTitle {
+    color:white;
+    font-style: italic;
+}
+h1.sponsorTitle {
+    font-weight: bolder;
+}
+h4.sponsorTitle {
+    font-weight: lighter;
+    margin: 0% 0% 2% 0%;;
+}
+
+div.sponsorContainer {
+    padding: 1% 5% 0% 7.5%;
+}
+
+img.sponsorLogo {
+    width: 40%;
+    height: auto;
+    border-radius: 100%;
+    transition: 0.1s;
+}
+img.sponsorLogoImpresa {
+    width: 20% !important;
+}
+
+figcaption.sponsorLogoCaption {
+    color: white;
+    font-style: italic;
+    font-weight: lighter;
+}
+
+div.prenotazioneContainer {
+    padding: 0% 10% 0% 10%;
+}
+
+#prenotazioneTitolo {
+    color: white;
+    font-style: italic;
+    font-weight: bolder;
+    margin: 0% 0% 7.5% 0%;
+    animation: pulsing 1.0s linear infinite;
+}
+@keyframes pulsing {
+    0%   {letter-spacing: 1vh;}
+    25%  {letter-spacing: 2vh;}
+    50%  {letter-spacing: 3vh;}
+    75%  {letter-spacing: 2vh;}
+    100% {letter-spacing: 1vh;}
+}
+
+label.prenotazioneLabel {
+    color: white !important;
+    font-weight: bolder;
+}
+
+input.campoPrenotazione{
+    font-style: italic;
+}
+
+div.inputContainer {
+    text-align: left;
+    padding: 2% 0% 2% 0%;
+    margin: 0% 1% 0% 0%;
+}
+
+button.prenotazioneConferma {
+    width: 70%;
+    margin: 7.5% 0% 4% 0%;
+    font-weight: bolder;
+    transition: 0.3s
+}
+button.prenotazioneConferma:hover {
+    width: 100%;
 }

@@ -1,0 +1,80 @@
+goTo = (callerElement) => {
+    let callerElementID = callerElement.id;
+    
+    switch (callerElementID)  {
+        case 'mainArrowsDown':
+            let mainURL = 'C:/Users/tommaso/Documents/_Projects/BriUpWeb/static/index.html'
+            window.location = mainURL + '#secondPage'
+            break;
+        default:
+            break;
+    }
+}
+
+prenota = () => {
+    let nome = $('#prenotazioneNome').val();
+    let cognome = $('#prenotazioneCognome').val();
+    let email = $('#prenotazioneMail').val();
+    let numero = $('#prenotazioneNumero').val();
+    let giorno = $('#prenotazioneGiorno').val();
+    let ora = $('#prenotazioneOra').val();
+
+    if (campiValidi(nome, cognome, email, numero, giorno, ora)) {
+        alert('Bella zio');
+    } else {
+        console.log('aaa')
+    }
+}
+
+campiValidi = (nome, cognome, email, numero, giorno, ora) => {
+    if (nome == '') {
+        alert('Non hai inserito il nome!')
+        return false;
+    }
+    if (cognome == '') {
+        alert('Non hai inserito il cognome!')
+        return false;
+    }
+    if (email == '') {
+        alert('Non hai inserito l\'email!')
+        return false;
+    }
+    if (!emailValida(email)) {
+        alert('L\'email inserita non è valida!')
+        return false;
+    }
+    if (numero == '' || parseInt(numero)<1 || parseInt(numero)>10) {
+        alert('Numero di posti non valido!')
+        return false;
+    }
+
+    let giorniValidi = [
+        'Venerdì 10 Giugno',
+        'Sabato 11 Giugno',
+        'Domenica 11 Giugno',
+    ]
+    if (giorno == '' || !giorniValidi.includes(giorno)) {
+        alert('Il giorno selezionato non è valido!')
+        return false;
+    }
+
+    let oreValide = [
+        'Pomeriggio 16.30 - 18.30',
+        'Sera 18.30 - 21.00',
+        'Notte 21.00 - 24.00',
+    ]
+    if (ora == '' || !oreValide.includes(ora)) {
+        alert('L\'ora selezionata non è valida!')
+        return false;
+    }
+
+    return true;
+}
+
+emailValida = (email) => {
+    return String(email)
+    .toLowerCase()
+    .match(
+        /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+    );
+};
