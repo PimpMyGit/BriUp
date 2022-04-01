@@ -1,4 +1,4 @@
-#section0, #section1, #section3 {   
+#section0, #section1, #section3, #section4 {   
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -30,6 +30,12 @@
 }
 #section3 {
     background-image: url("../imgs/villa/DJI_0148.jpg");
+    background-position: bottom !important;
+    opacity: 1 !important;
+    z-index: 1;
+}
+#section4 {
+    background-image: url("../imgs/villa/DJI_0136.jpg");
     background-position: bottom !important;
     opacity: 1 !important;
     z-index: 1;
@@ -101,20 +107,17 @@ i.main-arrow-down{
     transition: 0.3s;
 }
 
-div.collab {
-    border-right: 1px solid white;
-}
-
-h1.sponsorTitle, h4.sponsorTitle {
+#sponsorTitle {
     color:white;
     font-style: italic;
-}
-h1.sponsorTitle {
     font-weight: bolder;
+    padding: 0% 0% 5% 0%;
 }
-h4.sponsorTitle {
+#sponsorTitleOrganizzazioni, #sponsorTitleImprese, #sponsorTitleComuni {
+    color:white;
+    font-style: italic;
     font-weight: lighter;
-    margin: 0% 0% 2% 0%;;
+    margin: 0% 0% 5% 0%;
 }
 
 div.sponsorContainer {

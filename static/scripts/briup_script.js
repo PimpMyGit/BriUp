@@ -3,8 +3,8 @@ goTo = (callerElement) => {
     
     switch (callerElementID)  {
         case 'mainArrowsDown':
-            let mainURL = 'C:/Users/tommaso/Documents/_Projects/BriUpWeb/static/index.html'
-            window.location = mainURL + '#secondPage'
+            // let mainURL = 'C:/Users/tommaso/Documents/_Projects/BriUpWeb/static/base.html'
+            // window.location = mainURL + '#secondPage'
             break;
         default:
             break;
@@ -20,9 +20,14 @@ prenota = () => {
     let ora = $('#prenotazioneOra').val();
 
     if (campiValidi(nome, cognome, email, numero, giorno, ora)) {
-        alert('Bella zio');
-    } else {
-        console.log('aaa')
+        sendPost('/confermaPrenotazione', {
+            'nome': nome,
+            'cognome': cognome,
+            'email': email,
+            'numero': numero,
+            'giorno': giorno,
+            'ora': ora
+        })
     }
 }
 
@@ -78,3 +83,22 @@ emailValida = (email) => {
         /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
     );
 };
+
+sendPost = (route, payload) => {
+    let baseURL = 'http://127.0.0.1:5000'
+    $.ajax({
+        type: "POST",
+        url: baseURL+route,
+        contentType: "application/json",
+        data: JSON.stringify(payload),
+        dataType: "json"
+    }).done((success) => {
+        if (success.exit == 'OK') {
+            alert(success.message)
+        } else {
+            alert('Qualcosa è andato storto. Riprova tra poco please.')
+        }
+    }).fail((error) => {
+        alert(error.message)
+    });
+}
