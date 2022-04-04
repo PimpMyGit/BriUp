@@ -1,14 +1,10 @@
-goTo = (callerElement) => {
-    let callerElementID = callerElement.id;
-    
-    switch (callerElementID)  {
-        case 'mainArrowsDown':
-            // let mainURL = 'C:/Users/tommaso/Documents/_Projects/BriUpWeb/static/base.html'
-            // window.location = mainURL + '#secondPage'
-            break;
-        default:
-            break;
-    }
+goTo = (goToElementID) => {
+    // // document.querySelector(goToElementID).scrollIntoView({
+    // //     behavior: 'smooth',
+    // //     block: 'start'
+    // // });
+    // let mainURL = 'C:/Users/tommaso/Documents/_Projects/BriUpWeb/static/index.html'
+    // window.url = mainURL + goToElementID
 }
 
 prenota = () => {

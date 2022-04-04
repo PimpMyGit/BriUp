@@ -5,9 +5,13 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="canonical" href="https://html5-templates.com/" />
-    <title>HTML Template - Full Page Slider Navigation</title>
+    <title>B R I U P</title>
+    <link rel="icon" type="image/x-icon" href="imgs/logo/favicon.png">
     <meta name="description" content="A brief page description">
     
+<!-- Compiled and minified CSS -->
+    
+
     <link rel="stylesheet" href="styles/original_style.css">
     <link rel="stylesheet" href="styles/briup_style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
@@ -17,10 +21,14 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    
+    <script src="scripts/original_script.js"></script>
     <script src="scripts/briup_script.js"></script>
 
-    <script src="scripts/original_script.js"></script>
-    
+
+    <script src="lib/splide-3.6.12/dist/js/splide.min.js"></script>
+    <link rel="stylesheet" href="lib/splide-3.6.12/dist/css/splide.min.css">
+
     <script type="text/javascript">
         $(document).ready(function() {
             $('#fullpage').fullpage({
@@ -45,20 +53,20 @@
         <div class="subtitleLabelsContainer container">
             <div class="row">
                 <div class="col-sm">
-                    <a href="#secondPage"><p class="lead subtitleLabel" align="center">Cibo</p></a>
+                    <a href="#thirdPage"><p class="lead subtitleLabel" align="center">MUSICA</p></a>
                 </div>
                 <div class="col-sm">
-                    <a href="#thirdPage"><p class="lead subtitleLabel" align="center">Musica</p></a>
+                    <a href="#thirdPage/1"><p class="lead subtitleLabel" align="center">ARTE</p></a>
                 </div>
                 <div class="col-sm">
-                    <a href="#4thpage"><p class="lead subtitleLabel" align="center">Arte</p></a>
+                    <a href="#thirdPage/2"><p class="lead subtitleLabel" align="center">CIBO</p></a>
                 </div>
             </div>
             <div class="row">
-                <div id="mainArrowsDown" class="col-sm main-arrows-down" onclick="goTo(this)">
-                    <i class="fa fa-bolt-lightning fa-2x main-arrow-down" aria-hidden="true"></i>
-                    <i class="fa fa-bolt-lightning fa-2x main-arrow-down" aria-hidden="true"></i>
-                    <i class="fa fa-bolt-lightning fa-2x main-arrow-down" aria-hidden="true"></i>
+                <div id="mainArrowsDown" class="col-sm main-arrows-down">
+                    <a href="#secondPage"><i class="fa fa-bolt-lightning fa-2x main-arrow-down" aria-hidden="true"></i></a>
+                    <a href="#secondPage"><i class="fa fa-bolt-lightning fa-2x main-arrow-down" aria-hidden="true"></i></a>
+                    <a href="#secondPage"><i class="fa fa-bolt-lightning fa-2x main-arrow-down" aria-hidden="true"></i></a>
                 </div>
             </div>
         </div>
@@ -66,23 +74,155 @@
 
 
     <div class="section" id="section1">
-        
+        <div class="container containerInfo">
+            <div class="row">
+                <div class="col-sm-6 infoFirstCol">
+                    <div class="infoTitleContainer">
+                        <img id="infoImgLogo" src='imgs/logo/logo_orizzontale_solo_logo.png'/>
+                        <h2 class="infoSubTitle">IL FESTIVAL X TALENTI LOCALI</h2>
+                    </div>
+                    <div class="infoInfoSection infoDoveQuando">
+                        <h1 class="infoSectionTitle infoTitleDoveQuando">10 • 11 • 12 Giugno 2022 @Villa Sironi, Oggiono</h1>
+                        <iframe id=infoImgMappa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2781.8994899035733!2d9.339897715025272!3d45.793241319449145!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786a7abdefc7201%3A0xacfa86e68d9f951e!2sVilla%20Sironi!5e0!3m2!1sit!2sit!4v1649089916047!5m2!1sit!2sit" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+                <div class="col-sm-6 infoSecondCol">
+                    <div class="infoInfoSection infoCosaFacciamo">
+                        <h1 class="infoSectionTitle">COSA VOGLIAMO CREARE</h1>
+                        <p class="infoSectionDescr">
+                            Un Festival multi-territoriale per il sostegno e la ripresa di iniziative giovanili, 
+                            capacità artistiche e capacità enogastronomiche.
+                        </p>
+                    </div>
+                    <div class="infoInfoSection infoChiSiamo">
+                        <h1 class="infoSectionTitle">CHI SIAMO</h1>
+                        <p class="infoSectionDescr">
+                            Un gruppo di realtà giovanili Under 25 del territorio
+                            che condividono la volontà di offrire le proprie risorse al
+                            servizio della comunità
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     
 
     <div class="section" id="section2">
-        <div class="slide" id="slide1">
-            <div class="intro">
-                <h1>First Slide</h1>
-                <p>Keep scrolling down</p>
+        <div class="slide" id="slideMusica">
+            <div class="container">
+                <div class="row">
+                    <h1 class="eventoTitle">MUSICA / SPETTACOLI</h1>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4">
+                        <h4 class="eventoGiorno">VENERDÌ</h4>
+                        <hr class="hrMusic">
+                        <div>
+                            <p class="musicInfo">Band1</p>
+                        </div>
+                        <div>
+                            <p class="musicInfo">Band2</p>
+                        </div>
+                        <div>
+                            <p class="musicInfo">Band3</p>
+                        </div>
+                        <div>
+                            <p class="musicInfo">Band4</p>
+                        </div>
+                        <div>
+                            <p class="musicInfo">Band5</p>
+                        </div>
+                        <div>
+                            <p class="musicInfo">Band6</p>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <h4 class="eventoGiorno">SABATO</h4>
+                        <hr class="hrMusic">
+                        <div>
+                            <p class="musicInfo">Band1</p>
+                        </div>
+                        <div>
+                            <p class="musicInfo">Band2</p>
+                        </div>
+                        <div>
+                            <p class="musicInfo">Band3</p>
+                        </div>
+                        <div>
+                            <p class="musicInfo">Band4</p>
+                        </div>
+                        <div>
+                            <p class="musicInfo">Band5</p>
+                        </div>
+                        <div>
+                            <p class="musicInfo">Band6</p>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <h4 class="eventoGiorno">DOMENICA</h4>
+                        <hr class="hrMusic">
+                        <div>
+                            <p class="musicInfo">Band1</p>
+                        </div>
+                        <div>
+                            <p class="musicInfo">Band2</p>
+                        </div>
+                        <div>
+                            <p class="musicInfo">Band3</p>
+                        </div>
+                        <div>
+                            <p class="musicInfo">Band4</p>
+                        </div>
+                        <div>
+                            <p class="musicInfo">Band5</p>
+                        </div>
+                        <div>
+                            <p class="musicInfo">Band6</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="slide" id="slide2">
-            <h1>Slide 2</h1>
-			<p>You can also scroll left or right on this screen</p>
+        <div class="slide" id="slideArte">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-7">
+			            <p class="arteTitle">ESPOSIZIONE ARTISTICA</p>
+                        <p class="arteSubTitle">// @TESTE DI IDRA <br>// @HEART ASSOC.</p>
+                        <div class="arteDesrctiption">
+                        </div>
+                        <div class="splide">
+                            <div class="splide__track">
+                                  <ul class="splide__list">
+                                     <div class="splide__slide"> 
+                                        <img class="arteImgSlide" style="width: 50% !important;" src="imgs/partner/TesteDiIdrajpg.jpg"/> 
+                                    </div>
+                                     <div class="splide__slide"> 
+                                        <img class="arteImgSlide" src="imgs/villa/DJI_0113.jpg"/> 
+                                        <p class="arteImageCaptionSlide">Carlo carloni - Olio su tela - 6mila euro</p>
+                                    </div>
+                                     <div class="splide__slide"> 
+                                        <img class="arteImgSlide" src="imgs/villa/DJI_0114.jpg"/> 
+                                        <p class="arteImageCaptionSlide">Carlo carloni - Olio su tela - 6mila euro</p>
+                                    </div>
+                                     <div class="splide__slide"> 
+                                        <img class="arteImgSlide" src="imgs/villa/DJI_0123.jpg"/> 
+                                        <p class="arteImageCaptionSlide">Carlo carloni - Olio su tela - 6mila euro</p>
+                                    </div>
+                                  </ul>
+                            </div>
+                          </div>
+                    </div>
+                    <div class="col-sm-5">
+                        <p class="arteTitle">Collab Letterarie</p>
+                        <h3>Libreria libreria</h3>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="slide" id="slide3">
-            <h1>Slide 3</h1>
+        <div class="slide" id="slideCibo">
+            <h1>slide 3</h1>
         </div>
     </div>
 
@@ -254,6 +394,14 @@
         </div>
     </div>
 </div>
+
+<script>
+  new Splide( '.splide', {
+    type: 'loop',
+    gap: '5rem',
+    // padding: '5rem',
+  }).mount();
+</script>
 
 </body>
 
