@@ -186,22 +186,17 @@
         </div>
         <div class="slide" id="slideArte">
             <div class="container">
-                <div class="row">
-                    <div class="col-sm-7">
-
-                        <!-- 
-                            Qua vanno fatti due slider (uno slider è tutto il blocchetto nella div "splide" r.204),
-                            perchè oltre a teste di idra ci saranno anche quelli di associazione HeaArt:
-                            http://www.associazioneheart.it/eventiarticolo.php?idp=1296#
-                            di conseguenza si sposta in una nuova slide la parte dedicata alla presentazione 
-                            delle case editrici   
-                        -->
-
-			            <p class="arteTitle">ESPOSIZIONE ARTISTICA</p>
-                        <p class="arteSubTitle">// @TESTE DI IDRA <br>// @HEART ASSOC.</p>
+                <div class="row arteRowTitle">
+                    <div class="col-sm-12">
+                        <p class="arteTitle">ARTE</p>
+                    </div>
+                </div>
+                <div class="row arteRowDescription">
+                    <div class="col-sm-6">
                         <div class="arteDesrctiption">
+                            <p class="arteSubTitle">// @TESTE DI IDRA</p>
                         </div>
-                        <div class="splide">
+                        <div id='splideIDRA' class="splide">
                             <div class="splide__track">
                                   <ul class="splide__list">
                                      <div class="splide__slide"> 
@@ -209,20 +204,52 @@
                                     </div>
                                      <div class="splide__slide"> 
                                         <img class="arteImgSlide" src="imgs/villa/DJI_0113.jpg"/> 
-                                        <p class="arteImageCaptionSlide">Carlo carloni - Olio su tela - 6mila euro</p>
+                                        <p class="arteImageCaptionSlide">Descrizione</p>
                                     </div>
                                      <div class="splide__slide"> 
                                         <img class="arteImgSlide" src="imgs/villa/DJI_0114.jpg"/> 
-                                        <p class="arteImageCaptionSlide">Carlo carloni - Olio su tela - 6mila euro</p>
+                                        <p class="arteImageCaptionSlide">Descrizione</p>
                                     </div>
                                      <div class="splide__slide"> 
                                         <img class="arteImgSlide" src="imgs/villa/DJI_0123.jpg"/> 
-                                        <p class="arteImageCaptionSlide">Carlo carloni - Olio su tela - 6mila euro</p>
+                                        <p class="arteImageCaptionSlide">Descrizione</p>
                                     </div>
                                   </ul>
                             </div>
                           </div>
                     </div>
+                    <div class="col-sm-6">
+                        <div class="arteDesrctiption">
+                            <p class="arteSubTitle">// @HEART ASSOC.</p>
+                        </div>
+                        <div id='splideHEART' class="splide">
+                            <div class="splide__track">
+                                  <ul class="splide__list">
+                                     <div class="splide__slide"> 
+                                        <img class="arteImgSlide" style="width: 50% !important;" src="imgs/partner/HEART/logo.jpg"/> 
+                                    </div>
+                                     <div class="splide__slide"> 
+                                        <img class="arteImgSlide" src="imgs/villa/DJI_0113.jpg"/> 
+                                        <p class="arteImageCaptionSlide">Descrizione</p>
+                                    </div>
+                                     <div class="splide__slide"> 
+                                        <img class="arteImgSlide" src="imgs/villa/DJI_0114.jpg"/> 
+                                        <p class="arteImageCaptionSlide">Descrizione</p>
+                                    </div>
+                                     <div class="splide__slide"> 
+                                        <img class="arteImgSlide" src="imgs/villa/DJI_0123.jpg"/> 
+                                        <p class="arteImageCaptionSlide">Descrizione</p>
+                                    </div>
+                                  </ul>
+                            </div>
+                          </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="slide" id="slideLettere">
+            <div class="container">
+                <div class="row">
                     <div class="col-sm-5">
                         <p class="arteTitle">Collab Letterarie</p>
                         <h3>Libreria libreria</h3>
@@ -346,19 +373,19 @@
                             <div class="col-sm-4 sponsorLogoContainer sponsorComuniContainer">
                                 <figure class="figure">
                                     <img class="sponsorLogo sponsorLogoImpresa" src="imgs/partner/nextPartner.jpg"/>
-                                    <figcaption class="figure-caption text-center sponsorLogoCaption">Impresa generosa s.p.a.</figcaption>
+                                    <figcaption class="figure-caption text-center sponsorLogoCaption">Help</figcaption>
                                 </figure>
                             </div>
                             <div class="col-sm-4 sponsorLogoContainer">
                                 <figure class="figure">
                                     <img class="sponsorLogo sponsorLogoImpresa" src="imgs/partner/nextPartner.jpg"/>
-                                    <figcaption class="figure-caption text-center sponsorLogoCaption">Impresa gentile s.r.l.</figcaption>
+                                    <figcaption class="figure-caption text-center sponsorLogoCaption">Help</figcaption>
                                 </figure>
                             </div>
                             <div class="col-sm-4 sponsorLogoContainer">
                                 <figure class="figure">
                                     <img class="sponsorLogo sponsorLogoImpresa" src="imgs/partner/nextPartner.jpg"/>
-                                    <figcaption class="figure-caption text-center sponsorLogoCaption">F.lli. prodighi</figcaption>
+                                    <figcaption class="figure-caption text-center sponsorLogoCaption">Help</figcaption>
                                 </figure>
                             </div>
                         </div>
@@ -405,7 +432,13 @@
 </div>
 
 <script>
-  new Splide( '.splide', {
+  let splideIDRA = new Splide( '#splideIDRA', {
+    type: 'loop',
+    gap: '5rem',
+    // padding: '5rem',
+  }).mount();
+
+  let splideHEART = new Splide( '#splideHEART', {
     type: 'loop',
     gap: '5rem',
     // padding: '5rem',

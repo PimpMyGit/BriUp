@@ -1,3 +1,7 @@
+.section{
+    height: 100% !important; 
+}
+
 #section0, #section1, #section2, #section3, #section4 {   
     background-position: center;
     background-repeat: no-repeat;
@@ -8,7 +12,7 @@
     background-image: url("../imgs/villa/DJI_0130_mod1.jpg");
     opacity: 0.85;
 	background-size: 200% 200%;
-	animation: rotating 150s linear infinite;
+	animation: rotating 150s linear;
 	height: 100vh;
 }
 @media screen and (max-width: 600px) {
@@ -183,7 +187,13 @@ p.infoSectionDescr {
     z-index: 1;
 }
 
-#slideMusica {}
+#slideMusica {
+    background-image: url("../imgs/villa/DJI_0134.jpg");
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
 h1.eventoTitle {
     color: white !important;
@@ -210,22 +220,37 @@ p.musicInfo {
     margin: 0% 0% 1% 0% !important;
 }
 
-#slideArte {}
+#slideArte {
+    background-image: url("../imgs/villa/DSC02906.jpg");
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+div.arteRowTitle {
+    padding: 0% 0% 0% 0% !important;
+    margin: 0% 0% 0% 0% !important;
+}
+div.arteRowDescription {
+    padding: 0% 0% 0% 0% !important;
+    margin: 0% 0% 0% 0% !important;
+}
 
 p.arteTitle{
     color: white !important;
-    font-size: 20px;
+    font-size: 70px;
     font-weight: bolder;
     letter-spacing: 0.5vw;
 
-    padding: 2.5% 0% 0% 0% !important;
+    padding: 0% 0% 0% 0% !important;
     margin: 0% 0% 0% 0% !important;
 }
 p.arteSubTitle {
     color: white !important;
-    font-size: 30px;
+    font-size: 26px;
     font-weight: bolder;
-    letter-spacing: 1vw;
+    letter-spacing: 0.5vw;
 
     padding: 0% 0% 1% 0% !important;
     margin: 0% 0% 0% 0% !important;
@@ -302,7 +327,7 @@ div.prenotazioneContainer {
     font-style: italic;
     font-weight: bolder;
     margin: 0% 0% 7.5% 0%;
-    animation: pulsing 1.0s linear infinite;
+    animation: pulsing 1.0s linear;
 }
 @keyframes pulsing {
     0%   {letter-spacing: 1vh;}
