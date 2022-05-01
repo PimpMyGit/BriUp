@@ -1,449 +1,689 @@
 <!doctype html>
 <html lang="en" class="no-js">
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="canonical" href="https://html5-templates.com/" />
-    <title>B R I U P</title>
+    <title>BriUp Festival</title>
     <link rel="icon" type="image/x-icon" href="imgs/logo/favicon.png">
     <meta name="description" content="A brief page description">
-    
-<!-- Compiled and minified CSS -->
-    
+
+    <!-- Compiled and minified CSS -->
+
 
     <link rel="stylesheet" href="styles/original_style.css">
     <link rel="stylesheet" href="styles/briup_style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    
-    <script src="scripts/original_script.js"></script>
-    <script src="scripts/briup_script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+        integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
+    <script src="scripts/original_script.js"></script>
+    
 
     <script src="lib/splide-3.6.12/dist/js/splide.min.js"></script>
     <link rel="stylesheet" href="lib/splide-3.6.12/dist/css/splide.min.css">
 
     <script type="text/javascript">
-        $(document).ready(function() {
+        $(document).ready(function () {
             $('#fullpage').fullpage({
-              sectionsColor: [undefined, undefined, '#7BAABE', '#42cbf5', '#ccddff'],
-              anchors: ['firstPage', 'secondPage', 'thirdPage', '4thpage', 'lastPage'],
-              menu: '#menu',
+                sectionsColor: [undefined, undefined, '#7BAABE', '#42cbf5', '#ccddff'],
+                anchors: ['firstPage', 'secondPage', 'thirdPage', 'thirdPageArte', 'thirdPageLett', 'pageCibo', 'pageBirra', '4thpage', 'lastPage', 'footer'],
+                menu: '#menu',
             });
         });
     </script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0PGD3PDQDB"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-0PGD3PDQDB');
+    </script>
+
+    <style>
+        html,
+        body {
+        height: 100%;
+        }
+        .overlay {
+        position: absolute;
+        display: none;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: rgba(0, 0, 0, 0.8);
+        z-index: 2;
+        }
+
+        .popup {
+        position: absolute;
+        width: 80%;
+        height: 80%;
+        top: 10%;
+        left: 10%;
+        text-align: center;
+        background: white;
+        border-radius: 20px;
+        }
+    
+        .popup h3 {
+        font-size: 15px;
+        height: 50px;
+        line-height: 50px;
+        color: black;
+        }
+        .CloseIcon{
+        cursor: pointer;
+        margin: 5% 0% 5% 0%;
+        }
+    </style>
 </head>
 
 <body>
 
-<div id="fullpage">
-    
-    <div class="section active" id="section0">
-        <div class="mainLogo">
-            <img src='imgs/logo/logo_orizzontale_solo_logo.png' id='img-Logo'/>
-            <p id="subtitleLogo">FESTIVAL</p>
-        </div>
-        <hr class="mainSeparator">
-        <div class="subtitleLabelsContainer container">
-            <div class="row">
-                <div class="col-sm">
-                    <a href="#thirdPage"><p class="lead subtitleLabel" align="center">MUSICA</p></a>
-                </div>
-                <div class="col-sm">
-                    <a href="#thirdPage/1"><p class="lead subtitleLabel" align="center">ARTE</p></a>
-                </div>
-                <div class="col-sm">
-                    <a href="#thirdPage/2"><p class="lead subtitleLabel" align="center">CIBO</p></a>
-                </div>
+    <div class="headerMenu">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <button id="btnHamburgherMenu" class="navbar-toggler" type="button" onclick="ToggleModal()" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#firstPage">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#secondPage">Chi siamo</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#thirdPage">Musica</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#thirdPage/1">Arte</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#thirdPage/2">Lettere <i class="fa-solid fa-person-digging"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#thirdPage/3">Enogastronomia <i class="fa-solid fa-person-digging"></i></a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://www.instagram.com/briup_fest/"><i class="fa-brands fa-instagram"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://www.facebook.com/Briup-104733598881845/"><i class="fa-brands fa-facebook"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://www.gofund.me/e53b31b5"><i class="fa-solid fa-piggy-bank"></i></a>
+                    </li>
+                </ul>
             </div>
-            <div class="row">
-                <div id="mainArrowsDown" class="col-sm main-arrows-down">
-                    <a href="#secondPage"><i class="fa fa-bolt-lightning fa-2x main-arrow-down" aria-hidden="true"></i></a>
-                    <a href="#secondPage"><i class="fa fa-bolt-lightning fa-2x main-arrow-down" aria-hidden="true"></i></a>
-                    <a href="#secondPage"><i class="fa fa-bolt-lightning fa-2x main-arrow-down" aria-hidden="true"></i></a>
-                </div>
+          </nav>
+    </div>
+    <div class="overlay" id="overlay">
+        <div class="popup">
+            <div onclick="CloseModal()" class="CloseIcon">
+                <i class="fa-solid fa-xmark"></i>
+            </div>
+            <div class="mobileMenuContainer">
+                <p class="mobileMenuTitle">BriUp Festival</p>
+                <a class="mobileMenuItemLink" href="#firstPage"><p class="mobileMenuItem">Home</p></a>
+                <a class="mobileMenuItemLink" href="#secondPage"><p class="mobileMenuItem">Chi siamo</p></a>
+                <hr>
+                <p class="mobileMenuSubtitle">Programma</p>
+                <a class="mobileMenuItemLink" href="#thirdPage"><p class="mobileMenuItem">Musica</p></a>
+                <a class="mobileMenuItemLink" href="#thirdPage/1"><p class="mobileMenuItem">Arte</p></a>
+                <a class="mobileMenuItemLink" href="#thirdPage/2"><p class="mobileMenuItem">Lettere <i class="fa-solid fa-person-digging"></i></p></a>
+                <a class="mobileMenuItemLink" href="#thirdPage/3"><p class="mobileMenuItem">Enogastronomia <i class="fa-solid fa-person-digging"></i></p></a>
+                <hr>
+                <p class="mobileMenuSubtitle">Social</p>
+                <a class="mobileMenuItemLink" href="https://www.instagram.com/briup_fest/"><p class="mobileMenuItem">Instagram</p></a>
+                <a class="mobileMenuItemLink" href="https://www.facebook.com/Briup-104733598881845/"><p class="mobileMenuItem">Facebook</p></a>
+                <a class="mobileMenuItemLink" href="https://www.gofund.me/e53b31b5"><p class="mobileMenuItem">GoFound Me</p></a>
             </div>
         </div>
     </div>
 
-
-    <div class="section" id="section1">
-        <div class="container containerInfo">
-            <div class="row">
-                <div class="col-sm-6 infoFirstCol">
-                    <div class="infoTitleContainer">
-                        <img id="infoImgLogo" src='imgs/logo/logo_orizzontale_solo_logo.png'/>
-                        <h2 class="infoSubTitle">IL FESTIVAL X TALENTI LOCALI</h2>
-                    </div>
-                    <div class="infoInfoSection infoDoveQuando">
-                        <h1 class="infoSectionTitle infoTitleDoveQuando">10 • 11 • 12 Giugno 2022 @Villa Sironi, Oggiono</h1>
-                        <iframe id=infoImgMappa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2781.8994899035733!2d9.339897715025272!3d45.793241319449145!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786a7abdefc7201%3A0xacfa86e68d9f951e!2sVilla%20Sironi!5e0!3m2!1sit!2sit!4v1649089916047!5m2!1sit!2sit" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                    </div>
+    <main role="main">
+        <div id="fullpage">
+            <div class="section active" id="section0">
+                <div class="mainLogo">
+                    <img src='imgs/logo/logo_orizzontale_solo_logo.png' id='img-Logo' />
+                    <p id="subtitleLogo">FESTIVAL</p>
                 </div>
-                <div class="col-sm-6 infoSecondCol">
-                    <div class="infoInfoSection infoCosaFacciamo">
-                        <h1 class="infoSectionTitle">COSA VOGLIAMO CREARE</h1>
-                        <p class="infoSectionDescr">
-                            Un Festival multi-territoriale per il sostegno e la ripresa di iniziative giovanili, 
-                            capacità artistiche e capacità enogastronomiche.
-                        </p>
-                    </div>
-                    <div class="infoInfoSection infoChiSiamo">
-                        <h1 class="infoSectionTitle">CHI SIAMO</h1>
-                        <p class="infoSectionDescr">
-                            Un gruppo di realtà giovanili Under 25 del territorio
-                            che condividono la volontà di offrire le proprie risorse al
-                            servizio della comunità
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-
-    <div class="section" id="section2">
-        <div class="slide" id="slideMusica">
-            <div class="container">
-                <div class="row">
-                    <h1 class="eventoTitle">MUSICA / SPETTACOLI</h1>
-                </div>
-                <div class="row">
-                    <div class="col-sm-4">
-                        <h4 class="eventoGiorno">VENERDÌ</h4>
-                        <hr class="hrMusic">
-                        <div>
-                            <p class="musicInfo">Band1</p>
+                <hr class="mainSeparator">
+                <div class="subtitleLabelsContainer container">
+                    <div class="row">
+                        <div class="col-sm">
+                            <a href="#thirdPage">
+                                <p class="lead subtitleLabel" align="center">MUSICA</p>
+                            </a>
                         </div>
-                        <div>
-                            <p class="musicInfo">Band2</p>
+                        <div class="col-sm">
+                            <!-- <a href="#thirdPageArte"> -->
+                            <a href="#thirdPage/1">
+                                <p class="lead subtitleLabel" align="center">ARTE</p>
+                            </a>
                         </div>
-                        <div>
-                            <p class="musicInfo">Band3</p>
-                        </div>
-                        <div>
-                            <p class="musicInfo">Band4</p>
-                        </div>
-                        <div>
-                            <p class="musicInfo">Band5</p>
-                        </div>
-                        <div>
-                            <p class="musicInfo">Band6</p>
+                        <div class="col-sm">
+                            <!-- <a href="#pageCibo"> -->
+                            <a href="#thirdPage/3">
+                                <p class="lead subtitleLabel" align="center">CIBO</p>
+                            </a>
                         </div>
                     </div>
-                    <div class="col-sm-4">
-                        <h4 class="eventoGiorno">SABATO</h4>
-                        <hr class="hrMusic">
-                        <div>
-                            <p class="musicInfo">Band1</p>
-                        </div>
-                        <div>
-                            <p class="musicInfo">Band2</p>
-                        </div>
-                        <div>
-                            <p class="musicInfo">Band3</p>
-                        </div>
-                        <div>
-                            <p class="musicInfo">Band4</p>
-                        </div>
-                        <div>
-                            <p class="musicInfo">Band5</p>
-                        </div>
-                        <div>
-                            <p class="musicInfo">Band6</p>
-                        </div>
-                    </div>
-                    <div class="col-sm-4">
-                        <h4 class="eventoGiorno">DOMENICA</h4>
-                        <hr class="hrMusic">
-                        <div>
-                            <p class="musicInfo">Band1</p>
-                        </div>
-                        <div>
-                            <p class="musicInfo">Band2</p>
-                        </div>
-                        <div>
-                            <p class="musicInfo">Band3</p>
-                        </div>
-                        <div>
-                            <p class="musicInfo">Band4</p>
-                        </div>
-                        <div>
-                            <p class="musicInfo">Band5</p>
-                        </div>
-                        <div>
-                            <p class="musicInfo">Band6</p>
+                    <div class="row">
+                        <div id="mainArrowsDown" class="col-sm main-arrows-down">
+                            <a href="#secondPage"><i class="fa fa-bolt-lightning fa-2x main-arrow-down"
+                                    aria-hidden="true"></i></a>
+                            <a href="#secondPage"><i class="fa fa-bolt-lightning fa-2x main-arrow-down"
+                                    aria-hidden="true"></i></a>
+                            <a href="#secondPage"><i class="fa fa-bolt-lightning fa-2x main-arrow-down"
+                                    aria-hidden="true"></i></a>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="slide" id="slideArte">
-            <div class="container">
-                <div class="row arteRowTitle">
-                    <div class="col-sm-12">
-                        <p class="arteTitle">ARTE</p>
+
+
+            <div class="section" id="section1">
+                <div class="container containerInfo">
+                    <div class="row">
+                        <div class="col-sm-6 infoFirstCol">
+                            <div class="infoTitleContainer">
+                                <img id="infoImgLogo" src='imgs/logo/logo_orizzontale_solo_logo.png' />
+                                <h2 class="infoSubTitle">FESTIVAL DEL TALENTO LOCALE</h2>
+                            </div>
+                            <div class="infoInfoSection infoDoveQuando">
+                                <h1 class="infoSectionTitle infoTitleDoveQuando">10 • 11 • 12 Giugno 2022 @Villa Sironi,
+                                    Oggiono</h1>
+                                <iframe id=infoImgMappa"
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2781.8994899035733!2d9.339897715025272!3d45.793241319449145!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786a7abdefc7201%3A0xacfa86e68d9f951e!2sVilla%20Sironi!5e0!3m2!1sit!2sit!4v1649089916047!5m2!1sit!2sit"
+                                    style="border:0;" allowfullscreen="" loading="lazy"
+                                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 infoSecondCol">
+                            <div class="infoInfoSection infoCosaFacciamo">
+                                <h1 class="infoSectionTitle">COSA VOGLIAMO CREARE</h1>
+                                <p class="infoSectionDescr">
+                                    Un Festival multi-territoriale per il sostegno e la ripresa di iniziative giovanili,
+                                    capacità artistiche e capacità enogastronomiche
+                                </p>
+                            </div>
+                            <div class="infoInfoSection infoChiSiamo">
+                                <h1 class="infoSectionTitle">CHI SIAMO</h1>
+                                <p class="infoSectionDescr">
+                                    Un gruppo di realtà giovanili Under 25 del territorio
+                                    che condividono la volontà di offrire le proprie risorse al
+                                    servizio della comunità
+                                </p>
+                                <div class="infoLoghiGruppiContainer d-flex justify-content-around">
+                                    <figure class="figure">
+                                        <!-- <img class="gruppoGiovaniLogo" src="imgs/partner/nextPartner.jpg" /> -->
+                                        <figcaption class="figure-caption text-center gruppoGiovaniLogoCaption">
+                                            OGVN<br>Oggiono
+                                        </figcaption>
+                                    </figure>
+                                    <figure class="figure">
+                                        <!-- <img class="gruppoGiovaniLogo" src="imgs/partner/nextPartner.jpg" /> -->
+                                        <figcaption class="figure-caption text-center gruppoGiovaniLogoCaption">
+                                            RIFUGIO<br>Sirtori
+                                        </figcaption>
+                                    </figure>
+                                    <figure class="figure">
+                                        <!-- <img class="gruppoGiovaniLogo" src="imgs/partner/nextPartner.jpg" /> -->
+                                        <figcaption class="figure-caption text-center gruppoGiovaniLogoCaption">
+                                            Quasi amici<br>Brazago
+                                        </figcaption>
+                                    </figure>
+                                    <figure class="figure">
+                                        <!-- <img class="gruppoGiovaniLogo" src="imgs/partner/nextPartner.jpg" /> -->
+                                        <figcaption class="figure-caption text-center gruppoGiovaniLogoCaption">
+                                            Vibes<br>Galbiate
+                                        </figcaption>
+                                    </figure>
+                                    <figure class="figure">
+                                        <!-- <img class="gruppoGiovaniLogo" src="imgs/partner/nextPartner.jpg" /> -->
+                                        <figcaption class="figure-caption text-center gruppoGiovaniLogoCaption">
+                                           Besana4Future<br>Besana B.za
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="row arteRowDescription">
+            </div>
+
+
+            <div class="section" id="section2">
+                <div class="slide" id="slideMusica">
+                    <div class="container">
+                        <div class="row">
+                            <h1 class="eventoTitle">ESIBIZIONI</h1>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <h4 class="eventoGiorno">VENERDÌ 10</h4>
+                                <hr class="hrMusic">
+                                <div>
+                                    <div class="musicaGruppo">
+                                        <p class="musicInfo"><b>Stendhart : 18.00</b></p>
+                                        <p class="genreInfo">(Esibizione Teatrale)</p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="musicaGruppo">
+                                        <p class="musicInfo"><b>Squeaky Wheel : 18.45</b></p>
+                                        <p class="genreInfo">(Rock n' Blues)</p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="musicaGruppo">
+                                        <p class="musicInfo"><b>Joke's On Me : 18.45</b></p>
+                                        <p class="genreInfo">(Pop Rock)</p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="musicaGruppo">
+                                        <p class="musicInfo"><b>Double B : 22.00</b></p>
+                                        <p class="genreInfo">(Disk Jokey Hip-Hop)</p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="musicaGruppo">
+                                        <p class="musicInfo"><b>Rap : 23.00</b></p>
+                                        <p class="genreInfo">(Musta • Tres • Taylor Sosa • 36PNK36 • D Money)</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <h4 class="eventoGiorno">SABATO 11</h4>
+                                <hr class="hrMusic">
+                                <div>
+                                    <div class="musicaGruppo">
+                                        <p class="musicInfo"><b>Biscotti Biscotti : 18.00</b></p>
+                                        <p class="genreInfo">(Neo-Traditional World Jazz)</p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="musicaGruppo">
+                                        <p class="musicInfo"><b>ASO Band : 19.15</b></p>
+                                        <p class="genreInfo">(Shoegaze)</p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="musicaGruppo">
+                                        <p class="musicInfo"><b>Speakeasy : 20.30</b></p>
+                                        <p class="genreInfo">(Rock)</p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="musicaGruppo">
+                                        <p class="musicInfo"><b>Double B : 22.30</b></p>
+                                        <p class="genreInfo">(Dj Set)<br></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <h4 class="eventoGiorno">DOMENICA 12</h4>
+                                <hr class="hrMusic">
+                                <div>
+                                    <div class="musicaGruppo">
+                                        <p class="musicInfo"><b>Shiyness : 18.00</b></p>
+                                        <p class="genreInfo">(Indie Acustico)</p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="musicaGruppo">
+                                        <p class="musicInfo"><b>Chiara Vismara : 19.15</b></p>
+                                        <p class="genreInfo">(Pianista - Musica Classica)</p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="musicaGruppo">
+                                        <p class="musicInfo"><b>Fearful man : 20.15</b></p>
+                                        <p class="genreInfo">(Ambient Mix Folk)</p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="musicaGruppo">
+                                        <p class="musicInfo"><b>Martini Police : 22.30</b></p>
+                                        <p class="genreInfo">(Rock-Psichedelico '70s)</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide" id="slideArte">
+                    <div class="container">
+                        <div class="row arteRowTitle">
+                            <div class="col-sm-12">
+                                <p class="arteTitle">ARTE</p>
+                            </div>
+                        </div>
+                        <div class="row arteRowDescription">
+                            <div class="col-sm-6">
+                                <div class="arteDescription">
+                                    <p class="arteSubTitle">// @TESTE DI IDRA</p>
+                                </div>
+                                <div class="arteLoghiContainer IDRALogoContainer">
+                                    <figure class="figure">
+                                        <img id="logoIDRA" class="arteImgSlide" src="imgs/partner/IDRA/LogoIDRA01_B.png" />
+                                    </figure>
+                                </div>
+                                <!-- <div id='splideIDRA' class="splide">
+                                    <div class="splide__track">
+                                        <ul class="splide__list">
+                                            <div class="splide__slide">
+                                                <img class="arteImgSlide" style="width: 50% !important;"
+                                                    src="imgs/partner/IDRA/LogoIDRA01_B.png" />
+                                            </div>
+                                            <div class="splide__slide">
+                                                <img class="arteImgSlide" src="imgs/villa/DJI_0113.jpg" />
+                                                <p class="arteImageCaptionSlide">Descrizione</p>
+                                            </div>
+                                            <div class="splide__slide">
+                                                <img class="arteImgSlide" src="imgs/villa/DJI_0114.jpg" />
+                                                <p class="arteImageCaptionSlide">Descrizione</p>
+                                            </div>
+                                            <div class="splide__slide">
+                                                <img class="arteImgSlide" src="imgs/villa/DJI_0123.jpg" />
+                                                <p class="arteImageCaptionSlide">Descrizione</p>
+                                            </div>
+                                        </ul>
+                                    </div>
+                                </div> -->
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="arteDescription">
+                                    <p class="arteSubTitle">// @HEART ASSOC.</p>
+                                </div>
+                                <div class="arteLoghiContainer HEARTLogoContainer">
+                                    <figure class="figure">
+                                        <img id="logoHEART" class="arteImgSlide" src="imgs/partner/HEART/logoSQ.jpg" />
+                                    </figure>
+                                </div>
+                                <!-- <div id='splideHEART' class="splide">
+                                    <div class="splide__track">
+                                        <ul class="splide__list">
+                                            <div class="splide__slide">
+                                                <img class="arteImgSlide" style="width: 50% !important;"
+                                                    src="imgs/partner/HEART/logo.jpg" />
+                                            </div>
+                                            <div class="splide__slide">
+                                                <img class="arteImgSlide" src="imgs/villa/DJI_0113.jpg" />
+                                                <p class="arteImageCaptionSlide">Descrizione</p>
+                                            </div>
+                                            <div class="splide__slide">
+                                                <img class="arteImgSlide" src="imgs/villa/DJI_0114.jpg" />
+                                                <p class="arteImageCaptionSlide">Descrizione</p>
+                                            </div>
+                                            <div class="splide__slide">
+                                                <img class="arteImgSlide" src="imgs/villa/DJI_0123.jpg" />
+                                                <p class="arteImageCaptionSlide">Descrizione</p>
+                                            </div>
+                                        </ul>
+                                    </div>
+                                </div> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- <div class="slide" id="slideLettere">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-5">
+                                <p class="lettereTitle">Collab Letterarie</p>
+                                <h3>Libreria libreria</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+
+                <!-- <div class="slide" id="slideCibo">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-5">
+                                <p class="ciboTitle">Food & Beer</p>
+                                <h3>CIBO E BIRRA</h3>
+                                <p>collaborazione con mystic burger?</p>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+
+            </div>
+
+            <!-- <div class="section" id="section3">
+                <div class="row d-flex justify-content-around">
                     <div class="col-sm-6">
-                        <div class="arteDesrctiption">
-                            <p class="arteSubTitle">// @TESTE DI IDRA</p>
-                        </div>
-                        <div id='splideIDRA' class="splide">
-                            <div class="splide__track">
-                                  <ul class="splide__list">
-                                     <div class="splide__slide"> 
-                                        <img class="arteImgSlide" style="width: 50% !important;" src="imgs/partner/IDRA/LogoIDRA01_B.png"/> 
-                                    </div>
-                                     <div class="splide__slide"> 
-                                        <img class="arteImgSlide" src="imgs/villa/DJI_0113.jpg"/> 
-                                        <p class="arteImageCaptionSlide">Descrizione</p>
-                                    </div>
-                                     <div class="splide__slide"> 
-                                        <img class="arteImgSlide" src="imgs/villa/DJI_0114.jpg"/> 
-                                        <p class="arteImageCaptionSlide">Descrizione</p>
-                                    </div>
-                                     <div class="splide__slide"> 
-                                        <img class="arteImgSlide" src="imgs/villa/DJI_0123.jpg"/> 
-                                        <p class="arteImageCaptionSlide">Descrizione</p>
-                                    </div>
-                                  </ul>
+                        <div class="container prenotazioneContainer">
+                            <div class="row">
+                                <div class="col-sm-12 d-flex justify-content-around">
+                                    <h1 id="prenotazioneTitolo">Prenotaaaa!!</h1>
+                                </div>
                             </div>
-                          </div>
-                    </div>
-                    <div class="col-sm-6">
-                        <div class="arteDesrctiption">
-                            <p class="arteSubTitle">// @HEART ASSOC.</p>
-                        </div>
-                        <div id='splideHEART' class="splide">
-                            <div class="splide__track">
-                                  <ul class="splide__list">
-                                     <div class="splide__slide"> 
-                                        <img class="arteImgSlide" style="width: 50% !important;" src="imgs/partner/HEART/logo.jpg"/> 
+                            <div class="row">
+                                <div class="d-flex justify-content-between">
+                                    <div class="col-sm-6 inputContainer">
+                                        <label for="prenotazioneNome" class="prenotazioneLabel">Nome:</label>
+                                        <input id="prenotazioneNome" class="form-control campoPrenotazione" type="text" placeholder="Carlo">
                                     </div>
-                                     <div class="splide__slide"> 
-                                        <img class="arteImgSlide" src="imgs/villa/DJI_0113.jpg"/> 
-                                        <p class="arteImageCaptionSlide">Descrizione</p>
+                                    <div class="col-sm-6 inputContainer">
+                                        <label for="prenotazioneCognome" class="prenotazioneLabel">Cognome:</label>
+                                        <input id="prenotazioneCognome" class="form-control campoPrenotazione" type="text" placeholder="Carloni">
                                     </div>
-                                     <div class="splide__slide"> 
-                                        <img class="arteImgSlide" src="imgs/villa/DJI_0114.jpg"/> 
-                                        <p class="arteImageCaptionSlide">Descrizione</p>
-                                    </div>
-                                     <div class="splide__slide"> 
-                                        <img class="arteImgSlide" src="imgs/villa/DJI_0123.jpg"/> 
-                                        <p class="arteImageCaptionSlide">Descrizione</p>
-                                    </div>
-                                  </ul>
+                                </div>
                             </div>
-                          </div>
+                            <div class="row">
+                                <div class="d-flex justify-content-between">
+                                    <div class="col-12 inputContainer" inputContainer>
+                                        <label for="prenotazioneMail" class="prenotazioneLabel">Email:</label>
+                                        <input id="prenotazioneMail" class="form-control campoPrenotazione" type="text" placeholder="carlo.carloni@propaganda.it">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="d-flex justify-content-left">
+                                    <div class="col-sm-6 inputContainer">
+                                        <label for="prenotazioneNumero" class="prenotazioneLabel">In quanti siete?</label>
+                                        <input id="prenotazioneNumero" class="form-control campoPrenotazione" type="number" min="1" max="10" value="1">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="d-flex justify-content-between">
+                                    <div class="col-sm-6 inputContainer">
+                                        <label for="prenotazioneGiorno" class="prenotazioneLabel">Giorno:</label>
+                                        <select id="prenotazioneGiorno" class="form-control campoPrenotazione">
+                                            <option selected>Venerdì 10 Giugno</option>
+                                            <option>Sabato 11 Giugno</option>
+                                            <option>Domenica 11 Giugno</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-sm-6 inputContainer">
+                                        <label for="prenotazioneOra" class="prenotazioneLabel">Fascia oraria:</label>
+                                        <select id="prenotazioneOra" class="form-control campoPrenotazione">
+                                            <option selected>Pomeriggio 16.30 - 18.30</option>
+                                            <option>Sera 18.30 - 21.00</option>
+                                            <option>Notte 21.00 - 24.00</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-12 d-flex justify-content-around">
+                                    <button type="button" class="btn btn-danger prenotazioneConferma" onclick="prenota()">Confermaaa &nbsp;&nbsp; 
+                                        <i class="fa fa-bomb" aria-hidden="true"></i>
+                                        <i class="fa fa-bomb" aria-hidden="true"></i>
+                                        <i class="fa fa-bomb" aria-hidden="true"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
-        <div class="slide" id="slideLettere">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-5">
-                        <p class="arteTitle">Collab Letterarie</p>
-                        <h3>Libreria libreria</h3>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="slide" id="slideCibo">
-            <h1>slide 3</h1>
-        </div>
-    </div>
+            </div> -->
 
-    <div class="section" id="section3">
-        <div class="row d-flex justify-content-around">
-            <div class="col-sm-6">
-                <div class="container prenotazioneContainer">
-                    <div class="row">
-                        <div class="col-sm-12 d-flex justify-content-around">
-                            <h1 id="prenotazioneTitolo">Prenotaaaa!!</h1>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="d-flex justify-content-between">
-                            <div class="col-sm-6 inputContainer">
-                                <label for="prenotazioneNome" class="prenotazioneLabel">Nome:</label>
-                                <input id="prenotazioneNome" class="form-control campoPrenotazione" type="text" placeholder="Carlo">
+            <div class="section" id="section4">
+                <div class="row d-flex justify-content-around">
+                    <div class="col-sm-6 collab">
+                        <h1 class="sponsorTitle">Ringraziamo per il supporto</h1>
+                        <div class="container sponsorContainer">
+                            <div class="row">
+                                <h4 class="sponsorTitle">Le organizzazioni:</h4>
+                                <div class="d-flex justify-content-between">
+                                    <div class="col-sm-2 sponsorLogoContainer sponsorOrganizzazioniContainer">
+                                        <figure class="figure">
+                                            <img class="sponsorLogo sponsorLogoOrganizzazione"
+                                                src="imgs/partner/enti/ambito_lecco.jpg" />
+                                            <figcaption class="figure-caption text-center sponsorLogoCaption">Ambito
+                                                Distrettuale<br>di Lecco</figcaption>
+                                        </figure>
+                                    </div>
+                                    <div class="col-sm-2 sponsorLogoContainer sponsorLogoOrganizzazione">
+                                        <figure class="figure">
+                                            <img class="sponsorLogo" src="imgs/partner/enti/csv.png" />
+                                            <figcaption class="figure-caption text-center sponsorLogoCaption">CSV
+                                                Monza,<br>Lecco e Sondrio</figcaption>
+                                        </figure>
+                                    </div>
+                                    <div class="col-sm-2 sponsorLogoContainer sponsorLogoOrganizzazione">
+                                        <figure class="figure">
+                                            <img class="sponsorLogo" src="imgs/partner/enti/girasole.png" />
+                                            <figcaption class="figure-caption text-center sponsorLogoCaption">Impresa
+                                                sociale<br>"Il Girasole"</figcaption>
+                                        </figure>
+                                    </div>
+                                    <div class="col-sm-2 sponsorLogoContainer sponsorLogoOrganizzazione">
+                                        <figure class="figure">
+                                            <img class="sponsorLogo" src="imgs/partner/enti/lega_ambiente.png" />
+                                            <figcaption class="figure-caption text-center sponsorLogoCaption">
+                                                Legambiente<br>Lecco</figcaption>
+                                        </figure>
+                                    </div>
+                                    <div class="col-sm-2 sponsorLogoContainer sponsorLogoOrganizzazione">
+                                        <figure class="figure">
+                                            <img class="sponsorLogo" src="imgs/partner/enti/ArtiDalVivoSQ.jpg" />
+                                            <figcaption class="figure-caption text-center sponsorLogoCaption">Fondo Arti dal Vivo</figcaption>
+                                        </figure>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="col-sm-6 inputContainer">
-                                <label for="prenotazioneCognome" class="prenotazioneLabel">Cognome:</label>
-                                <input id="prenotazioneCognome" class="form-control campoPrenotazione" type="text" placeholder="Carloni">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="d-flex justify-content-between">
-                            <div class="col-12 inputContainer" inputContainer>
-                                <label for="prenotazioneMail" class="prenotazioneLabel">Email:</label>
-                                <input id="prenotazioneMail" class="form-control campoPrenotazione" type="text" placeholder="carlo.carloni@propaganda.it">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="d-flex justify-content-left">
-                            <div class="col-sm-6 inputContainer">
-                                <label for="prenotazioneNumero" class="prenotazioneLabel">In quanti siete?</label>
-                                <input id="prenotazioneNumero" class="form-control campoPrenotazione" type="number" min="1" max="10" value="1">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="d-flex justify-content-between">
-                            <div class="col-sm-6 inputContainer">
-                                <label for="prenotazioneGiorno" class="prenotazioneLabel">Giorno:</label>
-                                <select id="prenotazioneGiorno" class="form-control campoPrenotazione">
-                                    <option selected>Venerdì 10 Giugno</option>
-                                    <option>Sabato 11 Giugno</option>
-                                    <option>Domenica 11 Giugno</option>
-                                </select>
-                            </div>
-                            <div class="col-sm-6 inputContainer">
-                                <label for="prenotazioneOra" class="prenotazioneLabel">Fascia oraria:</label>
-                                <select id="prenotazioneOra" class="form-control campoPrenotazione">
-                                    <option selected>Pomeriggio 16.30 - 18.30</option>
-                                    <option>Sera 18.30 - 21.00</option>
-                                    <option>Notte 21.00 - 24.00</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-sm-12 d-flex justify-content-around">
-                            <button type="button" class="btn btn-danger prenotazioneConferma" onclick="prenota()">Confermaaa &nbsp;&nbsp; 
-                                <i class="fa fa-bomb" aria-hidden="true"></i>
-                                <i class="fa fa-bomb" aria-hidden="true"></i>
-                                <i class="fa fa-bomb" aria-hidden="true"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="section" id="section4">
-        <div class="row d-flex justify-content-around">
-            <div class="col-sm-6 collab">
-                <h1 class="sponsorTitle">Ringraziamo per il supporto</h1>
-                <div class="container sponsorContainer">
-                    <div class="row">
-                        <h4 class="sponsorTitle">Le organizzazioni:</h4>
-                        <div class="d-flex justify-content-between">
-                            <div class="col-sm-3 sponsorLogoContainer sponsorOrganizzazioniContainer">
-                                <figure class="figure">
-                                    <img class="sponsorLogo sponsorLogoOrganizzazione" src="imgs/partner/ambito_lecco.jpg"/>
-                                    <figcaption class="figure-caption text-center sponsorLogoCaption">Ambito Distrettuale<br>di Lecco</figcaption>
-                                </figure>
-                            </div>
-                            <div class="col-sm-3 sponsorLogoContainer sponsorLogoOrganizzazione">
-                                <figure class="figure">
-                                    <img class="sponsorLogo" src="imgs/partner/csv.png"/>
-                                    <figcaption class="figure-caption text-center sponsorLogoCaption">CSV Monza,<br>Lecco e Sondrio</figcaption>
-                                </figure>
-                            </div>
-                            <div class="col-sm-3 sponsorLogoContainer sponsorLogoOrganizzazione">
-                                <figure class="figure">
-                                    <img class="sponsorLogo" src="imgs/partner/girasole.png"/>
-                                    <figcaption class="figure-caption text-center sponsorLogoCaption">Impresa sociale<br>"Il Girasole"</figcaption>
-                                </figure>
-                            </div>
-                            <div class="col-sm-3 sponsorLogoContainer sponsorLogoOrganizzazione">
-                                <figure class="figure">
-                                    <img class="sponsorLogo" src="imgs/partner/lega_ambiente.png"/>
-                                    <figcaption class="figure-caption text-center sponsorLogoCaption">Legambiente<br>Lecco</figcaption>
-                                </figure>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <h4 class="sponsorTitle">Le imprese:</h4>
-                        <div class="d-flex justify-content-between">
-                            <div class="col-sm-4 sponsorLogoContainer sponsorComuniContainer">
-                                <figure class="figure">
-                                    <img class="sponsorLogo sponsorLogoImpresa" src="imgs/partner/nextPartner.jpg"/>
-                                    <figcaption class="figure-caption text-center sponsorLogoCaption">Help</figcaption>
-                                </figure>
-                            </div>
-                            <div class="col-sm-4 sponsorLogoContainer">
-                                <figure class="figure">
-                                    <img class="sponsorLogo sponsorLogoImpresa" src="imgs/partner/nextPartner.jpg"/>
-                                    <figcaption class="figure-caption text-center sponsorLogoCaption">Help</figcaption>
-                                </figure>
-                            </div>
-                            <div class="col-sm-4 sponsorLogoContainer">
-                                <figure class="figure">
-                                    <img class="sponsorLogo sponsorLogoImpresa" src="imgs/partner/nextPartner.jpg"/>
-                                    <figcaption class="figure-caption text-center sponsorLogoCaption">Help</figcaption>
-                                </figure>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <h4 class="sponsorTitle">I Comuni:</h4>
-                        <div class="d-flex justify-content-between">
-                            <div class="col-sm-2 sponsorLogoContainer sponsorComuniContainer">
-                                <figure class="figure">
-                                    <img class="sponsorLogo sponsorLogoComune" src="imgs/partner/oggiono.jpg"/>
-                                    <figcaption class="figure-caption text-center sponsorLogoCaption">Oggiono</figcaption>
-                                </figure>
-                            </div>
-                            <div class="col-sm-2 sponsorLogoContainer">
-                                <figure class="figure">
-                                    <img class="sponsorLogo sponsorLogoComune" src="imgs/partner/cremella.jpg"/>
-                                    <figcaption class="figure-caption text-center sponsorLogoCaption">Cremella</figcaption>
-                                </figure>
-                            </div>
-                            <div class="col-sm-2 sponsorLogoContainer">
-                                <figure class="figure">
-                                    <img class="sponsorLogo sponsorLogoComune" src="imgs/partner/annone.png"/>
-                                    <figcaption class="figure-caption text-center sponsorLogoCaption">Annone<br>di Brianza</figcaption>
-                                </figure>
-                            </div>
-                            <div class="col-sm-2 sponsorLogoContainer">
-                                <figure class="figure">
-                                    <img class="sponsorLogo sponsorLogoComune" src="imgs/partner/barzago.png"/>
-                                    <figcaption class="figure-caption text-center sponsorLogoCaption">Barzago</figcaption>
-                                </figure>
-                            </div>
-                            <div class="col-sm-2 sponsorLogoContainer">
-                                <figure class="figure">
-                                    <img class="sponsorLogo sponsorLogoComune" src="imgs/partner/sirtori.gif"/>
-                                    <figcaption class="figure-caption text-center sponsorLogoCaption">Sirtori</figcaption>
-                                </figure>
+                            <!-- <div class="row">
+                                <h4 class="sponsorTitle">Le imprese:</h4>
+                                <div class="d-flex justify-content-between">
+                                    <div class="col-sm-4 sponsorLogoContainer sponsorComuniContainer">
+                                        <figure class="figure">
+                                            <img class="sponsorLogo sponsorLogoImpresa"
+                                                src="imgs/partner/nextPartner.jpg" />
+                                            <figcaption class="figure-caption text-center sponsorLogoCaption">Help
+                                            </figcaption>
+                                        </figure>
+                                    </div>
+                                    <div class="col-sm-4 sponsorLogoContainer">
+                                        <figure class="figure">
+                                            <img class="sponsorLogo sponsorLogoImpresa"
+                                                src="imgs/partner/nextPartner.jpg" />
+                                            <figcaption class="figure-caption text-center sponsorLogoCaption">Help
+                                            </figcaption>
+                                        </figure>
+                                    </div>
+                                    <div class="col-sm-4 sponsorLogoContainer">
+                                        <figure class="figure">
+                                            <img class="sponsorLogo sponsorLogoImpresa"
+                                                src="imgs/partner/nextPartner.jpg" />
+                                            <figcaption class="figure-caption text-center sponsorLogoCaption">Help
+                                            </figcaption>
+                                        </figure>
+                                    </div>
+                                </div>
+                            </div> -->
+                            <div class="row">
+                                <h4 class="sponsorTitle">I Comuni:</h4>
+                                <div class="d-flex justify-content-between">
+                                    <div class="col-sm-2 sponsorLogoContainer sponsorComuniContainer">
+                                        <figure class="figure">
+                                            <img class="sponsorLogo sponsorLogoComune" src="imgs/partner/comuni/Annone.png" />
+                                            <figcaption class="figure-caption text-center sponsorLogoCaption">Oggiono</figcaption>
+                                        </figure>
+                                    </div>
+                                    <div class="col-sm-2 sponsorLogoContainer">
+                                        <figure class="figure">
+                                            <img class="sponsorLogo sponsorLogoComune" src="imgs/partner/comuni/Barzago.png" />
+                                            <figcaption class="figure-caption text-center sponsorLogoCaption">Cremella</figcaption>
+                                        </figure>
+                                    </div>
+                                    <div class="col-sm-2 sponsorLogoContainer">
+                                        <figure class="figure">
+                                            <img class="sponsorLogo sponsorLogoComune" src="imgs/partner/comuni/Cremella.png" />
+                                            <figcaption class="figure-caption text-center sponsorLogoCaption">Annone<br>di Brianza</figcaption>
+                                        </figure>
+                                    </div>
+                                    <div class="col-sm-2 sponsorLogoContainer">
+                                        <figure class="figure">
+                                            <img class="sponsorLogo sponsorLogoComune" src="imgs/partner/comuni/Oggiono.png" />
+                                            <figcaption class="figure-caption text-center sponsorLogoCaption">Barzago</figcaption>
+                                        </figure>
+                                    </div>
+                                    <div class="col-sm-2 sponsorLogoContainer">
+                                        <figure class="figure">
+                                            <img class="sponsorLogo sponsorLogoComune" src="imgs/partner/comuni/Sirtori.png" />
+                                            <figcaption class="figure-caption text-center sponsorLogoCaption">Sirtori</figcaption>
+                                        </figure>
+                                    </div>
+                                    <div class="col-sm-2 sponsorLogoContainer">
+                                        <figure class="figure">
+                                            <img class="sponsorLogo sponsorLogoComune" src="imgs/partner/comuni/molteno.gif" />
+                                            <figcaption class="figure-caption text-center sponsorLogoCaption">Molteno</figcaption>
+                                        </figure>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</div>
+    </main>
 
-<script>
-  let splideIDRA = new Splide( '#splideIDRA', {
-    type: 'loop',
-    gap: '5rem',
-    // padding: '5rem',
-  }).mount();
+    <script src="scripts/briup_script.js"></script>
+    <script>
+        // let splideIDRA = new Splide('#splideIDRA', {
+        //     type: 'loop',
+        //     gap: '5rem',
+        //     // padding: '5rem',
+        // }).mount();
 
-  let splideHEART = new Splide( '#splideHEART', {
-    type: 'loop',
-    gap: '5rem',
-    // padding: '5rem',
-  }).mount();
-</script>
+        // let splideHEART = new Splide('#splideHEART', {
+        //     type: 'loop',
+        //     gap: '5rem',
+        //     // padding: '5rem',
+        // }).mount();
+    </script>
 
 </body>
 

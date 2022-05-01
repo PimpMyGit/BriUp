@@ -98,3 +98,38 @@ sendPost = (route, payload) => {
         alert(error.message)
     });
 }
+
+//---------------------------------------------------------------------------//
+
+// Hamburger menù handler
+
+ToggleModal = () => {
+    if ($('#overlay').is(":visible")) {
+        $('#overlay').hide();
+    } else {
+        $('#overlay').show();
+    }
+}
+CloseModal = () => {
+    $('#overlay').hide();
+}
+
+$('.mobileMenuItemLink').click(() => {
+    CloseModal();
+});
+
+//---------------------------------------------------------------------------//
+
+// Aggiusta cosine in giro allo startup
+
+Fix = () => {
+
+    // Fix 1: logo IDRA e HEART stessa dimensione client
+    $('#logoHeart').css({
+        height: $('#logoIDRA').innerHeight()
+    });
+
+    // Fix 2:
+    // ...
+}
+Fix()
