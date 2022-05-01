@@ -119,17 +119,3 @@ $('.mobileMenuItemLink').click(() => {
 });
 
 //---------------------------------------------------------------------------//
-
-// Aggiusta cosine in giro allo startup
-
-Fix = () => {
-
-    // Fix 1: logo IDRA e HEART stessa dimensione client
-    $('#logoHeart').css({
-        height: $('#logoIDRA').innerHeight()
-    });
-
-    // Fix 2:
-    // ...
-}
-Fix()
