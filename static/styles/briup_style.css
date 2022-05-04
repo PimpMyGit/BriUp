@@ -315,7 +315,6 @@ figcaption.gruppoGiovaniLogoCaption {
 
 h1.eventoTitle {
     color: white !important;
-    font-size: 200%;
     font-weight: bolder;
     letter-spacing: 1%;
     font-size: 70px;
@@ -349,6 +348,13 @@ p.genreInfo{
 }
 
 @media screen and (max-width: 600px) {
+    h1.eventoTitle {
+        color: white !important;
+        font-weight: bolder;
+        letter-spacing: 1%;
+        font-size: 60px;
+    }
+
     h4.eventoGiorno {
         color: white;
         font-size: 150% !important;
@@ -442,6 +448,82 @@ p.arteImageCaptionSlide {
 
     margin: 0% 0% 5% 0% !important;
     padding: 0% 0% 0% 0% !important;
+}
+
+/* ------------------------------------------------------------------------- */
+
+#slideLettere {
+    background-image: url("../imgs/villa/DJI_0148.jpg");
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+h1.eventoLettereTitle {
+    color: white !important;
+    font-weight: bolder;
+    letter-spacing: 1%;
+    font-size: 60px;
+}
+div.lettereRowTitle {
+    padding: 0% 0% 0% 0% !important;
+    margin: 0% 0% 0% 0% !important;
+}
+div.lettereRowDescription {
+    padding: 0% 0% 0% 0% !important;
+    margin: 0% 0% 0% 0% !important;
+}
+p.lettereEventoData {
+    color: white;
+    font-size: 100% !important;
+    font-weight: bolder;
+    padding: 0% 0% 0% 0% !important;
+    margin: 0% 0% 1% 0% !important;
+}
+p.lettereEventoOspite {
+    color: white;
+    font-size: 100% !important;
+    font-weight: bolder;
+    padding: 0% 0% 0% 0% !important;
+    margin: 0% 0% 1% 0% !important;
+}
+p.lettereEventoDescr {
+    color: white;
+    font-size: 100% !important;
+    font-weight: lighter;
+    padding: 0% 0% 0% 0% !important;
+    margin: 0% 0% 2% 0% !important;
+}
+img.lettereEventoImg {
+    width: 35%;
+    padding: 0% 0% 0% 0% !important;
+    margin: 2% 0% 5% 0% !important;
+}
+
+@media screen and (max-width: 600px) {
+    h1.eventoLettereTitle {
+        color: white !important;
+        font-weight: bolder;
+        letter-spacing: 1%;
+        font-size: 50px;
+    }
+    div.lettereEvento {
+        display: flex; 
+        justify-content: space-between;
+        margin: 5% 0% 0% 0% !important;
+    }    
+    div.lettereEventoContainer {
+        flex: 2 1 0 !important;
+    }
+    div.letterePartnerImgContainer {
+        flex: 1 1 0 !important;
+    }
+    img.lettereEventoImg {
+        width: 60%;
+        padding: 0% 0% 0% 0% !important;
+        margin: 20% 0% 5% 0% !important;
+
+    }
 }
 
 /* ------------------------------------------------------------------------- */
