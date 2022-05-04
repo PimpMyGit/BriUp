@@ -69,22 +69,26 @@ a.nav-link:hover {
 }
 div.mobileMenuContainer {
     margin: auto;
+    height: auto !important;
+    padding-bottom: 10% !important;
 }
 p.mobileMenuTitle{
     color: lightseagreen !important;
     font-size: 30px !important;
     font-weight: bold !important;
+    margin: 0% 0% 3% 0% !important;
 }
 p.mobileMenuSubtitle {
     color: lightseagreen !important;
     font-size: 25px !important;
     font-weight: bold !important;
-    margin: 7.5% 0% 5% 0% !important;
+    margin: 7.5% 0% 3% 0% !important;
 }
 p.mobileMenuItem {
     font-size: 20px !important;
     font-weight: lighter !important;
     color: #666 !important;
+    margin: 0% 0% 2% 0% !important;
 }
 
 img.headerLogo {
