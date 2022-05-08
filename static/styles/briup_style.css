@@ -473,7 +473,7 @@ figcaption.gruppoGiovaniLogoCaption {
 h1.eventoTitle {
     color: white !important;
     font-weight: bolder;
-    letter-spacing: 1%;
+    letter-spacing: 5px;
     font-size: 70px;
 }
 
@@ -619,7 +619,7 @@ p.arteImageCaptionSlide {
 h1.eventoLettereTitle {
     color: white !important;
     font-weight: bolder;
-    letter-spacing: 1%;
+    letter-spacing: 2px;
     font-size: 60px;
 }
 div.lettereRowTitle {
