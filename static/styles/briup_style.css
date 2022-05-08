@@ -1,3 +1,136 @@
+#onStartOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    filter: alpha(opacity=70);
+    -moz-opacity: 0.7;  
+    -khtml-opacity: 0.7;
+    opacity: 0.7;
+    z-index: 100;
+    /* display: none; */
+}
+.cnt223 a {
+    text-decoration: none;
+}
+.onStartPopup {
+    width: 100%;
+    margin: 0 auto;
+    display: none;
+    position: fixed;
+    z-index: 101;
+}
+.cnt223 {
+    width: 60%;
+    height: 50%;
+    margin: 10% auto;
+    background: #f3f3f3;
+    position: relative;
+    z-index: 103;
+    padding: 3% 3% 2% 3%;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px #000;
+}
+p.onStartPopupTitle {
+    font-size: 30px !important;   
+    font-weight: 600;
+}
+a.onStartPopupGoFoundLink {
+    font-size: 16px;
+    font-weight: 200 !important;
+    color: lightseagreen !important;
+}
+a.onStartPopupGoFoundLink:hover {
+    transition: 0.3s;
+}
+a.onStartPopupGoFoundLink:hover {
+    color: lightseagreen !important;
+    text-decoration: underline !important;
+}
+.cnt223 p {
+    clear: both;
+    color: #555555;
+    /* text-align: justify; */
+    font-size: 16px;
+    font-family: sans-serif;
+}
+.cnt223 p a {
+    color: #d91900;
+    font-weight: bold;
+}
+.cnt223 .x {
+    float: right;
+    height: 35px;
+    left: 22px;
+    position: relative;
+    top: -25px;
+    width: 34px;
+}
+.cnt223 .x:hover {
+    cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+    .onStartPopup {
+        width: 100%;
+        margin: 10% auto;
+        display: none;
+        position: fixed;
+        z-index: 101;
+    }
+    .cnt223 {
+        width: 85%;
+        margin: 15% auto;
+        background: #f3f3f3;
+        position: relative;
+        z-index: 103;
+        padding: 7% 7.5% 5% 7.5%;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px #000;
+    }
+    p.onStartPopupTitle {
+        font-size: 20px !important;   
+        font-weight: 600;
+    }
+    a.onStartPopupGoFoundLink {
+        font-size: 14px;
+        font-weight: 200 !important;
+        color: lightseagreen !important;
+    }
+    a.onStartPopupGoFoundLink:hover {
+        transition: 0.3s;
+    }
+    a.onStartPopupGoFoundLink:hover {
+        color: lightseagreen !important;
+        text-decoration: underline !important;
+    }
+    .cnt223 p {
+        clear: both;
+        color: #555555;
+        font-size: 14px;
+        font-family: sans-serif;
+    }
+    .cnt223 p a {
+        color: #d91900;
+        font-weight: bold;
+    }
+    .cnt223 .x {
+        float: right;
+        height: 35px;
+        left: 22px;
+        position: relative;
+        top: -25px;
+        width: 34px;
+    }
+    .cnt223 .x:hover {
+        cursor: pointer;
+    }
+}
+
+/* ------------------------------------------------------------------------- */
+
 .section {
     height: 100% !important;
 }
@@ -66,6 +199,30 @@ a.nav-link:hover {
 a.nav-link:hover {
     color: lightseagreen !important;
     text-decoration: underline !important;
+}
+
+div.overlay {
+    position: absolute;
+    display: none;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 2;
+}
+div.popup {
+    position: absolute;
+    width: 80%;
+    top: 10%;
+    left: 10%;
+    text-align: center;
+    background: white;
+    border-radius: 20px;
+}
+div.closeIcon{
+    cursor: pointer;
+    margin: 5% 0% 5% 0%;
 }
 div.mobileMenuContainer {
     margin: auto;

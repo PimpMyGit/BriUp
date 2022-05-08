@@ -101,6 +101,25 @@ sendPost = (route, payload) => {
 
 //---------------------------------------------------------------------------//
 
+$(() => {
+    var onStartOverlay = $('<div id="onStartOverlay"></div>');
+    onStartOverlay.show(); 
+    onStartOverlay.appendTo(document.body); 
+    $('.onStartPopup').show(); 
+    $('.close').click(function() {
+        $('.onStartPopup').hide();
+        onStartOverlay.appendTo(document.body).remove();
+        return false;
+    }); 
+    $('.x').click(function() {
+        $('.onStartPopup').hide();
+        onStartOverlay.appendTo(document.body).remove();
+        return false;
+    });
+});
+
+//---------------------------------------------------------------------------//
+
 // Hamburger menù handler
 
 ToggleModal = () => {
