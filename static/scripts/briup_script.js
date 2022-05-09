@@ -101,6 +101,8 @@ sendPost = (route, payload) => {
 
 //---------------------------------------------------------------------------//
 
+// On Load Popup
+
 $(() => {
     var onStartOverlay = $('<div id="onStartOverlay"></div>');
     onStartOverlay.show(); 
@@ -122,19 +124,39 @@ $(() => {
 
 // Hamburger menù handler
 
-ToggleModal = () => {
+toggleModal = () => {
     if ($('#overlay').is(":visible")) {
         $('#overlay').hide();
     } else {
         $('#overlay').show();
     }
 }
-CloseModal = () => {
+closeModal = () => {
     $('#overlay').hide();
 }
 
 $('.mobileMenuItemLink').click(() => {
-    CloseModal();
+    closeModal();
+});
+
+//---------------------------------------------------------------------------//
+
+// Handler swipe on IDRA Carousel (Mantiene pagina senza passare alla successiva)
+
+let touchstartX = null;
+let touchstartY = null;
+let touchendX = null;
+let touchendY = null;
+$(window).on('hashchange', function(e){
+    if (window.location.hash === '#thirdPage/1') {
+        document.getElementById('splideIDRA').addEventListener('touchstart', function (e) {
+            $('#splideIDRA').attr('isSliding', true)
+        }, false);
+
+        document.getElementById('splideIDRA').addEventListener('touchend', function (e) {
+            $('#splideIDRA').removeAttr('isSliding')
+        }, false);
+    }
 });
 
 //---------------------------------------------------------------------------//

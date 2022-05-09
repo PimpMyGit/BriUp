@@ -60,7 +60,7 @@
 <body>
     <div class="headerMenu">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <button id="btnHamburgherMenu" class="navbar-toggler" type="button" onclick="ToggleModal()" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button id="btnHamburgherMenu" class="navbar-toggler" type="button" onclick="toggleModal()" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse">
@@ -122,7 +122,7 @@
 
     <div class="overlay" id="overlay">
         <div class="popup">
-            <div onclick="CloseModal()" class="closeIcon">
+            <div onclick="closeModal()" class="closeIcon">
                 <i class="fa-solid fa-xmark"></i>
             </div>
             <div class="mobileMenuContainer">
@@ -369,37 +369,68 @@
                                 <div class="arteDescription">
                                     <p class="arteSubTitle">// @TESTE DI IDRA</p>
                                 </div>
-                                <div class="arteLoghiContainer IDRALogoContainer">
+                                <!-- <div class="arteLoghiContainer IDRALogoContainer">
                                     <figure class="figure">
                                         <img id="logoIDRA" class="arteImgSlide" src="imgs/partner/IDRA/LogoIDRA01_B.png" />
                                     </figure>
-                                </div>
-                                <!-- <div id='splideIDRA' class="splide">
+                                </div> -->
+                                <div id='splideIDRA' class="splide">
                                     <div class="splide__track">
                                         <ul class="splide__list">
                                             <div class="splide__slide">
-                                                <img class="arteImgSlide" style="width: 50% !important;"
-                                                    src="imgs/partner/IDRA/LogoIDRA01_B.png" />
+                                                <img id="logoIDRA" class="arteImgSlide" src="imgs/partner/IDRA/LogoIDRA01_B.png" />
                                             </div>
                                             <div class="splide__slide">
-                                                <img class="arteImgSlide" src="imgs/villa/DJI_0113.jpg" />
-                                                <p class="arteImageCaptionSlide">Descrizione</p>
+                                                <img class="arteImgSlide" src="imgs/partner/IDRA/artisti/BeatriceValessina1.png" />
+                                                <p class="arteImageCaptionSlide">Beatrice Valessina • 1997</p>
                                             </div>
                                             <div class="splide__slide">
-                                                <img class="arteImgSlide" src="imgs/villa/DJI_0114.jpg" />
-                                                <p class="arteImageCaptionSlide">Descrizione</p>
+                                                <img class="arteImgSlide" src="imgs/partner/IDRA/artisti/MartinaFoglia1.png" />
+                                                <p class="arteImageCaptionSlide">Martina Foglia • 1997</p>
                                             </div>
                                             <div class="splide__slide">
-                                                <img class="arteImgSlide" src="imgs/villa/DJI_0123.jpg" />
-                                                <p class="arteImageCaptionSlide">Descrizione</p>
+                                                <img class="arteImgSlide" src="imgs/partner/IDRA/artisti/DiegoInvernizzi1.png" />
+                                                <p class="arteImageCaptionSlide">Diego Invernizzi • 1997</p>
+                                            </div>
+                                            <div class="splide__slide">
+                                                <img class="arteImgSlide" src="imgs/partner/IDRA/artisti/OmarMeijer1.png" />
+                                                <p class="arteImageCaptionSlide">Omar Meijer • 1998</p>
+                                            </div>
+                                            <div class="splide__slide">
+                                                <img class="arteImgSlide" src="imgs/partner/IDRA/artisti/LauraAnghileri1.png" />
+                                                <p class="arteImageCaptionSlide">Laura Anghileri • 1997</p>
+                                            </div>
+                                            <div class="splide__slide">
+                                                <img class="arteImgSlide" src="imgs/partner/IDRA/artisti/GiuliaSorrentino1.png" />
+                                                <p class="arteImageCaptionSlide">Giulia Sorrentino • 1992</p>
+                                            </div>
+                                            <div class="splide__slide">
+                                                <img class="arteImgSlide" src="imgs/partner/IDRA/artisti/SEMPO1.png" />
+                                                <p class="arteImageCaptionSlide">SEMPO • 1997</p>
+                                            </div>
+                                            <div class="splide__slide">
+                                                <img class="arteImgSlide" src="imgs/partner/IDRA/artisti/AlessandroBianchi1.png" />
+                                                <p class="arteImageCaptionSlide">Alessandro Bianchi • 1996</p>
+                                            </div>
+                                            <div class="splide__slide">
+                                                <img class="arteImgSlide" src="imgs/partner/IDRA/artisti/MicheleTizzoni1.png" />
+                                                <p class="arteImageCaptionSlide">Michele Tizzoni • 1996</p>
+                                            </div>
+                                            <div class="splide__slide">
+                                                <img class="arteImgSlide" src="imgs/partner/IDRA/artisti/ElisaVeronelli1.png" />
+                                                <p class="arteImageCaptionSlide">Elisa Veronelli • 1991</p>
+                                            </div>
+                                            <div class="splide__slide">
+                                                <img class="arteImgSlide" src="imgs/partner/IDRA/artisti/NoahMasseretti1.png" />
+                                                <p class="arteImageCaptionSlide">Noah Masseretti • 1997</p>
                                             </div>
                                         </ul>
                                     </div>
-                                </div> -->
+                                </div>
                             </div>
                             <div class="col-sm-6">
                                 <div class="arteDescription">
-                                    <p class="arteSubTitle">// @HEART ASSOC.</p>
+                                    <p class="arteSubTitle">// @HEART YOUNG</p>
                                 </div>
                                 <div class="arteLoghiContainer HEARTLogoContainer">
                                     <figure class="figure">
@@ -689,11 +720,11 @@
 
     <script src="scripts/briup_script.js"></script>
     <script>
-        // let splideIDRA = new Splide('#splideIDRA', {
-        //     type: 'loop',
-        //     gap: '5rem',
-        //     // padding: '5rem',
-        // }).mount();
+        let splideIDRA = new Splide('#splideIDRA', {
+            type: 'loop',
+            gap: '5rem',
+            // padding: '5rem',
+        }).mount();
 
         // let splideHEART = new Splide('#splideHEART', {
         //     type: 'loop',

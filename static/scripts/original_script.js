@@ -431,7 +431,9 @@
         * Optional `section` param.
         */
         function moveSlideRight(section){
-            moveSlide('right', section);
+            if (!$('#splideIDRA').attr('isSliding')) {
+                moveSlide('right', section);
+            }
         }
 
         /**
@@ -439,7 +441,9 @@
         * Optional `section` param.
         */
         function moveSlideLeft(section){
-            moveSlide('left', section);
+            if (!$('#splideIDRA').attr('isSliding')) {
+                moveSlide('left', section);
+            }
         }
 
         /**
