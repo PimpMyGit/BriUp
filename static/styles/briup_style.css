@@ -631,7 +631,19 @@ h1.eventoLettereTitle {
 }
 div.lettereRowTitle {
     padding: 0% 0% 0% 0% !important;
-    margin: 0% 0% 0% 0% !important;
+    margin: 0% 0% 5% 0% !important;
+}
+@media screen and (max-width: 600px) {
+    div.lettereRowTitle {
+        padding: 0% 0% 0% 0% !important;
+        margin: 0% 0% 0% 0% !important;
+    }
+    h1.eventoLettereTitle {
+        color: white !important;
+        font-weight: bolder;
+        letter-spacing: 2px;
+        font-size: 40px;
+    }
 }
 div.lettereRowDescription {
     padding: 0% 0% 0% 0% !important;
@@ -659,7 +671,7 @@ p.lettereEventoDescr {
     margin: 0% 0% 2% 0% !important;
 }
 img.lettereEventoImg {
-    width: 35%;
+    width: 25%;
     padding: 0% 0% 0% 0% !important;
     margin: 2% 0% 5% 0% !important;
 }
