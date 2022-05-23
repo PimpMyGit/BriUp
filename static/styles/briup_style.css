@@ -751,6 +751,16 @@ img.sponsorLogoImpresa {
     width: 20% !important;
 }
 
+.sponsorComuniContainer {
+    padding: auto;
+    margin: auto;
+}
+
+img.sponsorLogoComune {
+    width: 20% !important;
+    background-color: white;
+}
+
 figcaption.sponsorLogoCaption {
     color: white;
     font-style: italic;
