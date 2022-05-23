@@ -751,13 +751,8 @@ img.sponsorLogoImpresa {
     width: 20% !important;
 }
 
-.sponsorComuniContainer {
-    padding: auto;
-    margin: auto;
-}
-
 img.sponsorLogoComune {
-    width: 20% !important;
+    width: 50px !important;
     background-color: white;
 }
 
@@ -766,6 +761,15 @@ figcaption.sponsorLogoCaption {
     font-style: italic;
     font-weight: lighter;
 }
+
+@media screen and (max-width: 600px) {
+    img.sponsorLogoComune {
+        width: 30px !important;
+        background-color: white;
+    }
+}
+
+/* ------------------------------------------------------------------------- */
 
 #section3 {
     background-image: url("../imgs/villa/DJI_0148.jpg");
