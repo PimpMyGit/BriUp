@@ -616,6 +616,84 @@ p.arteImageCaptionSlide {
 
 /* ------------------------------------------------------------------------- */
 
+#slideHeartCatalogo {
+    background-image: url("../imgs/villa/IMG_20220516_224732.jpg");
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+h1.heartCatalogoTitle {
+    color: white !important;
+    font-weight: bolder;
+    letter-spacing: 2px;
+    font-size: 60px;
+}
+div.heartCatalogoTitle {
+    padding: 0% 0% 0% 0% !important;
+    margin: -2% 0% 3% 0% !important;
+}
+div.heartCatalogoContainer {
+    max-height: 60vh;
+    overflow-y: scroll;
+}
+.heartCatalogoContainer::-webkit-scrollbar {
+    width: 5px;
+}
+.heartCatalogoContainer::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background-color: #FFFFFF77;
+}
+.heartCatalogoContainer::-webkit-scrollbar-thumb {
+    background: red; 
+    border-radius: 10px;
+}
+.heartCatalogoContainer::-webkit-scrollbar-thumb:hover {
+    background: #b30000; 
+}
+
+div.heartCatalogoFilaOpere {
+    margin: 0% 0% 2% 0%;
+}
+div.heartCatalogoOperaContainer {
+    padding: auto;
+}
+div.heartCatalogoOpera {
+    background-color: #FFFFFF33;
+    height: 100%;
+    padding: 7% 0% 0% 0%;
+    border-radius: 5%;
+}
+img.heartCatalogoOperaImg {
+    width: 60%;
+    margin: 1% 0% 0% 0%;
+}
+p.heartCatalogoOperaDescr {
+    font-size: 11px;
+    color: white;
+    padding: 5% 1% 0% 1%;
+}
+
+
+@media screen and (max-width: 600px) {
+    h1.heartCatalogoTitle {
+        color: white !important;
+        font-weight: bolder;
+        letter-spacing: 2px;
+        font-size: 45px;
+    }
+    div.heartCatalogoTitle {
+        padding: 0% 0% 0% 0% !important;
+        margin: -10% 0% 3% 0% !important;
+    }
+    div.heartCatalogoOperaContainer {
+        padding: auto;
+        margin: 0% 0% 5% 0%; 
+    }
+}
+
+/* ------------------------------------------------------------------------- */
+
 #slideLettere {
     background-image: url("../imgs/villa/DJI_0148.jpg");
 

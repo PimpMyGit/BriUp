@@ -157,6 +157,20 @@ $(window).on('hashchange', function(e){
             $('#splideIDRA').removeAttr('isSliding')
         }, false);
     }
+
+    if (window.location.hash === '#thirdPage/2') {
+        ["mouseenter"].forEach(eventType => {
+            document.getElementById('heartCatalogo').addEventListener(eventType, function (e) {
+                $('#heartCatalogo').attr('isScrolling', true)
+            }, false);
+        })
+        
+        ["mouseleave"].forEach(eventType => {
+            document.getElementById('heartCatalogo').addEventListener(eventType, function (e) {
+                $('#heartCatalogo').removeAttr('isScrolling')
+            }, false);
+        })
+    }
 });
 
 //---------------------------------------------------------------------------//

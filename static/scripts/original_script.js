@@ -373,15 +373,17 @@
         * Moves the page up one section.
         */
         function moveSectionUp(){
-            var prev = $(SECTION_ACTIVE_SEL).prev(SECTION_SEL);
+            if (!$('#heartCatalogo').attr('isScrolling')) {
+                var prev = $(SECTION_ACTIVE_SEL).prev(SECTION_SEL);
 
-            //looping to the bottom if there's no more sections above
-            if (!prev.length && (options.loopTop || options.continuousVertical)) {
-                prev = $(SECTION_SEL).last();
-            }
+                //looping to the bottom if there's no more sections above
+                if (!prev.length && (options.loopTop || options.continuousVertical)) {
+                    prev = $(SECTION_SEL).last();
+                }
 
-            if (prev.length) {
-                scrollPage(prev, null, true);
+                if (prev.length) {
+                    scrollPage(prev, null, true);
+                }
             }
         }
 
@@ -389,16 +391,18 @@
         * Moves the page down one section.
         */
         function moveSectionDown(){
-            var next = $(SECTION_ACTIVE_SEL).next(SECTION_SEL);
+            if (!$('#heartCatalogo').attr('isScrolling')) {
+                var next = $(SECTION_ACTIVE_SEL).next(SECTION_SEL);
 
-            //looping to the top if there's no more sections below
-            if(!next.length &&
-                (options.loopBottom || options.continuousVertical)){
-                next = $(SECTION_SEL).first();
-            }
+                //looping to the top if there's no more sections below
+                if(!next.length &&
+                    (options.loopBottom || options.continuousVertical)){
+                    next = $(SECTION_SEL).first();
+                }
 
-            if(next.length){
-                scrollPage(next, null, false);
+                if(next.length){
+                    scrollPage(next, null, false);
+                }
             }
         }
 
