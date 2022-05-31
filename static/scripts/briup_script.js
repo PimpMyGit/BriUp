@@ -103,22 +103,22 @@ sendPost = (route, payload) => {
 
 // On Load Popup
 
-$(() => {
-    var onStartOverlay = $('<div id="onStartOverlay"></div>');
-    onStartOverlay.show(); 
-    onStartOverlay.appendTo(document.body); 
-    $('.onStartPopup').show(); 
-    $('.close').click(function() {
-        $('.onStartPopup').hide();
-        onStartOverlay.appendTo(document.body).remove();
-        return false;
-    }); 
-    $('.x').click(function() {
-        $('.onStartPopup').hide();
-        onStartOverlay.appendTo(document.body).remove();
-        return false;
-    });
-});
+// $(() => {
+//     var onStartOverlay = $('<div id="onStartOverlay"></div>');
+//     onStartOverlay.show(); 
+//     onStartOverlay.appendTo(document.body); 
+//     $('.onStartPopup').show(); 
+//     $('.close').click(function() {
+//         $('.onStartPopup').hide();
+//         onStartOverlay.appendTo(document.body).remove();
+//         return false;
+//     }); 
+//     $('.x').click(function() {
+//         $('.onStartPopup').hide();
+//         onStartOverlay.appendTo(document.body).remove();
+//         return false;
+//     });
+// });
 
 //---------------------------------------------------------------------------//
 
