@@ -782,15 +782,91 @@ img.lettereEventoImg {
 
 /* ------------------------------------------------------------------------- */
 
-p.ciboTitle {
-    color: white !important;
-    font-size: 70px;
-    font-weight: bolder;
-    letter-spacing: 0.5vw;
+#slideEngastronomia {
+    background-image: url("../imgs/villa/DJI_0113.jpg");
 
-    padding: 0% 0% 0% 0% !important;
-    margin: 0% 0% 0% 0% !important;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
+
+div.enogastronomiaRowTitle {
+    margin-top:-5%;
+}
+h1.enogastronomiaTitle {
+    color: white;
+    letter-spacing: 2px;
+}
+h1.fornitoriTitle {
+    color:white !important;
+    margin-bottom: 1%;;
+}   
+div.enogastronomiSection {
+    margin-top: 2%;
+}
+h2.espositoreNome {
+    color: white;
+    font-size: 18px;
+}
+img.espositoreLogo {
+    height: 100px;
+    border-radius: 100%;
+}
+img.logoBeccalli {
+    margin-left:-50%;
+}
+img.logoGiovenzana {
+    margin-left:-2  0%;
+}
+hr.enogastronomiaSeparator {
+    margin-top:2%;
+    color: white;
+    opacity: 0.5;
+}
+
+@media screen and (max-width: 600px) {
+    div.enogastronomiaRowTitle {
+        margin-top:-10%;
+    }
+    h1.enogastronomiaTitle {
+        color: white;
+        letter-spacing: 2px;
+    }
+    h1.fornitoriTitle {
+        color:white !important;
+        margin-bottom: 1%;
+        font-size: 15px;
+    }   
+    div.enogastronomiSection {
+        margin-top: 2%;
+    }
+    h2.espositoreNome {
+        color: white;
+        font-size: 12px;
+        font-weight: normal;
+        margin: 0% 0% 0.5% 0% !important;
+        padding: 0% 0% 0% 0% !important;
+    }
+    img.espositoreLogo {
+        height: 30px;
+        border-radius: 100%;
+        margin-bottom: 2%;;
+    }
+    img.logoBeccalli {
+        margin-left:0%;
+    }
+    img.logoGiovenzana {
+        margin-left:0%;
+    }
+    hr.enogastronomiaSeparator {
+        margin-top:0.5%;
+        margin-bottom:0% !important;
+        color: white;
+        opacity: 0.5;
+    }
+}
+
+/* ------------------------------------------------------------------------- */
 
 
 #section4 {
